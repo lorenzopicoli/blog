@@ -1,8 +1,22 @@
-<header>
-    <h1 class="site-title">Lorenzo</h1>
-    <nav>
-        <a href="{{ .Site.Home.RelPermalink }}">{{ i18n "uses" | default "uses" }}</a>
-        <a href="{{ .Site.Home.RelPermalink }}">{{ i18n "now" | default "now" }}</a>
-        <a href="{{ .Site.Home.RelPermalink }}">{{ i18n "links" | default "links" }}</a>
-    </nav>
-</header>
+<nav class="header">
+    <span class="title-container">
+        <a href="{{ .Site.Home.RelPermalink }}" class="site-title">{{ .Site.Title }}</a>
+    </span>
+    <span class="menu">
+        <a href="{{ relLangURL "projects" }}   ">{{ i18n "projects" | default "projects" }}</a>
+        <a href="{{ relLangURL "about" }}   ">{{ i18n "about" | default "about" }}</a>
+        {{ if .IsTranslated }}
+        {{ range .AllTranslations }}
+        {{ if ne .Language $.Language }}
+        <a href="{{ .Permalink }}" class="lang-switch">{{ .Language.LanguageName }}</a>
+        {{ end }}
+        {{ end }}
+        {{ else }}
+        {{ range $.Site.Home.AllTranslations }}
+        {{ if ne .Language $.Language }}
+        <a href="{{ .Permalink }}" class="lang-switch">{{ .Language.LanguageName }}</a>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+    </span>
+</nav>

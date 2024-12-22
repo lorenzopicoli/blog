@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #1a1a1a;
+  --bg-color: #141516;
   --text-color: #e0e0e0;
   --meta-color: #666;
   --link-color: #e0e0e0;
@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  font-size: 0.9rem;
 }
 
 .container {
@@ -23,26 +24,27 @@ body {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   margin-bottom: 2rem;
 }
 
-nav {
-  margin-bottom: 3rem;
+/* Single post */
+.article-date {
   font-size: 0.9rem;
+  margin-top: -1rem;
 }
 
-nav a {
-  margin-right: 1.5rem;
-  color: var(--meta-color);
-  text-decoration: none;
+article {
+  margin-top: 2rem;
 }
 
-nav a:hover {
-  color: var(--hover-color);
+content {
+  padding-top: 2rem;
+  display: inline-block;
 }
 
+/* Post list */
 .post-list {
   list-style: none;
   padding: 0;
@@ -52,25 +54,69 @@ nav a:hover {
   margin-bottom: 0.5rem;
   display: flex;
   gap: 1rem;
+  text-decoration: none;
 }
 
 .post-date {
   color: var(--meta-color);
-  min-width: 90px;
 }
 
 .post-title {
   color: var(--text-color);
-  text-decoration: none;
 }
 
 .post-title:hover {
   color: var(--hover-color);
 }
 
-article {
-  margin-top: 2rem;
+/* HEADER */
+.site-title {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.title-container {
+  height: 100%;
+  flex: 1;
+  color: var(--hover-color);
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #badae229;
+}
+
+/* Language switcher */
+.lang-switch {
+  color: var(--meta-color);
+  text-decoration: none;
   font-size: 0.9rem;
+}
+
+.lang-switch:hover {
+  color: var(--hover-color);
+}
+
+/* GENERAL */
+a:hover {
+  color: var(--hover-color);
+}
+
+a {
+  color: var(--meta-color);
 }
 
 hr {
@@ -79,11 +125,24 @@ hr {
   margin: 2rem 0;
 }
 
-.site-title {
-  font-family: monospace;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 0rem;
-  color: #fff;
+main {
+  min-height: 50vh;
+}
+
+/* Footer */
+footer {
+  margin-top: 3em;
+  border-top: 1px dashed #badae229;
+  display: flex;
+  padding-top: 1em;
+  gap: 10px;
+}
+
+footer svg {
+  height: 20px;
+  width: 20px;
+}
+
+.a-hover {
+  color: var(--hover-color);
 }
