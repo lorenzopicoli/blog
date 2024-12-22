@@ -1,0 +1,9 @@
+<footer class="footer">
+    <div class="footer-content">
+        {{ with .Site.Copyright }}
+        <span>{{ . | safeHTML }}</span>
+        {{ else }}
+        <span>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</span>
+        {{ end }}
+    </div>
+</footer>

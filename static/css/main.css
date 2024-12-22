@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --meta-color: #666;
+  --link-color: #e0e0e0;
+  --hover-color: #fff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: monospace;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+nav {
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+}
+
+nav a {
+  margin-right: 1.5rem;
+  color: var(--meta-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--hover-color);
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.post-date {
+  color: var(--meta-color);
+  min-width: 90px;
+}
+
+.post-title {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.post-title:hover {
+  color: var(--hover-color);
+}
+
+article {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--meta-color);
+  margin: 2rem 0;
+}
+
+.site-title {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0rem;
+  color: #fff;
+}
