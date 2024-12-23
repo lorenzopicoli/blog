@@ -1,6 +1,4 @@
-{{ define "main" }} {{ if .Title }}
-<h1>{{ .Title }}</h1>
-{{ end }} {{ .Content }}
+{{ define "main" }} {{ .Content }}
 <div class="post-list">
   {{ range .Pages.ByDate.Reverse }}
   <a href="{{ .RelPermalink }}" class="post-item">
