@@ -2,8 +2,8 @@
   --bg-color: #141516;
   --text-color: #e0e0e0;
   --meta-color: #666;
-  --link-color: #e0e0e0;
-  --hover-color: #fff;
+  --link-color: rgb(139, 126, 200);
+  --hover-color: rgb(94, 64, 157);
 }
 
 body {
@@ -117,7 +117,7 @@ a:hover {
 }
 
 a {
-  color: var(--meta-color);
+  color: var(--link-color);
 }
 
 hr {
@@ -137,6 +137,7 @@ footer {
   display: flex;
   padding-top: 1em;
   gap: 10px;
+  justify-content: center;
 }
 
 footer svg {
@@ -144,6 +145,6 @@ footer svg {
   width: 20px;
 }
 
-.a-hover {
-  color: var(--hover-color);
+.footer-link {
+  color: white;
 }

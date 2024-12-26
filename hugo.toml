@@ -13,3 +13,12 @@ defaultContentLanguage = "en"
   [languages.br]
     languageName = "🇧🇷"
     weight = 2
+
+
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = true
+    startLevel = 1
+
