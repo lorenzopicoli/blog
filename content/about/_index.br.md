@@ -14,6 +14,12 @@ Sou um entusiasta de dados desde que me pequeno. Em um mundo onde empresas colet
 
 Ao longo dos anos, disponibilizei boa parte do meu setup, incluindo minha [configuração completa de infraestrutura](https://github.com/lorenzopicoli/selfhosted), que mantenho usando Ansible. Para minhas anotações e organização geral, uso o maravilhoso [Obsidian](https://obsidian.md/).
 
+# Onde você pode me encontrar
+
+- [Github](https://github.com/lorenzopicoli)
+- [LinkedIn](https://www.linkedin.com/in/lorenzopicolimodolo/)
+- [Email](mailto:lorenzopicoli@me.com)
+
 ## Este Site
 
 Este site foi construído do zero usando [Hugo](https://gohugo.io/). Em vez de usar um tema pronto, criei um design personalizado. Você pode explorar o código-fonte no [GitHub](https://github.com/lorenzopicoli/blog).

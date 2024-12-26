@@ -14,6 +14,12 @@ I'm a data enthusiast for as long as I can remember. In an age where companies c
 
 Over the years, I've open-sourced significant portions of my setup, including my complete [infrastructure configuration](https://github.com/lorenzopicoli/selfhosted), which I maintain using Ansible. For my notes and overall organization I use the wonderful [Obsidian](https://obsidian.md/).
 
+# Where to find me
+
+- [Github](https://github.com/lorenzopicoli)
+- [LinkedIn](https://www.linkedin.com/in/lorenzopicolimodolo/)
+- [Email](mailto:lorenzopicoli@me.com)
+
 # This Website
 
 This website is built from scratch using [Hugo](https://gohugo.io/). Rather than using a pre-built theme, I created a custom design. You can explore the source code on [GitHub](https://github.com/lorenzopicoli/blog).

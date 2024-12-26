@@ -22,3 +22,7 @@ defaultContentLanguage = "en"
     ordered = true
     startLevel = 1
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-D74E9WRELM'
+

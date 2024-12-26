@@ -6,9 +6,9 @@ showTableOfContents = true
 draft = false
 +++
 
-{{< table_of_contents >}}
-
 # A Snapshot of My Self-Hosted Journey in 2024
+
+{{< table_of_contents >}}
 
 My gateway self-hosted service was Pi-hole. In February of 2023, I got a server on Hetzner and installed Pi-hole on it. The self-hosted rabbit hole goes deep, and I went headfirst into it.
 Almost one year later, around Christmas time in 2023, I wanted to write a recap of my year self-hosting, but things happened and I never got around to writing about that. Now, two years into self-hosting, I regret not being able to go back and see how much farther I have come.
