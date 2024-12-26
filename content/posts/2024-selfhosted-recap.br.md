@@ -8,7 +8,7 @@ draft = false
 
 {{< table_of_contents >}}
 
-# Self Hosting
+# Meu Setup Self-hosted em 2024
 
 Meu serviço self-hosted inicial foi o Pi-hole. Em fevereiro de 2023, consegui um servidor na Hetzner e instalei o Pi-hole nele.
 Quase um ano depois, por volta do Natal de 2023, eu queria escrever um resumo do meu ano de selfhosting, mas a vida aconteceu e nunca consegui escrever sobre isso. Agora, dois anos após começar com self hosting, me arrependo de não poder voltar e ver o quanto progredi.
