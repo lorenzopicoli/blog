@@ -2,7 +2,6 @@
 title = "A Snapshot of My Self-Hosted Journey in 2024"
 date = "2024-12-21T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
-showTableOfContents = true
 draft = false
 +++
 
@@ -10,7 +9,7 @@ draft = false
 
 {{< table_of_contents >}}
 
-My gateway self-hosted service was Pi-hole. In February of 2023, I got a server on Hetzner and installed Pi-hole on it. The self-hosted rabbit hole goes deep, and I went headfirst into it.
+What started as a simple experiment with Pi-hole in February 2023 spiraled into a full-blown obsession with self-hosting.
 Almost one year later, around Christmas time in 2023, I wanted to write a recap of my year self-hosting, but things happened and I never got around to writing about that. Now, two years into self-hosting, I regret not being able to go back and see how much farther I have come.
 
 This is why I'm setting myself up for 2025 by sharing my 2024 setup and the state of things.
@@ -25,43 +24,29 @@ Before we dive into it, it's important to know that my goals in the past years h
 
 Let's get the equipment out of the way!
 
-- Mikrotik hEX RB750Gr3 router
-- Thrifted switch
-- Unifi AP LR
-- HP Prodesk Mini G4
-  - i5-8500T
-  - 8GB SODIM DDR4
-  - 500GB SSD
-- Beelink Mini S12 Pro
-  - N100
-  - 16GB DDR4
-  - 500GB M.2
-- Raspberry Pi 4 4GB
-- Synology 918+
-  - 8GB RAM
-  - 256GB Cache
-  - 2x Western Digital 3TB WD Red Plus
-  - 1x Seagate IronWolf ST4000VN006 4TB
-  - SHR raid with tolerance to 1 drive fault
-- CyberPower CP1500AVRLCD3 UPS, 1500VA/900W
+For networking I chose to go with **Mikrotik hEX RB750Gr3** as my router. I love this device as it offers a lot of functionality like installing Wireguard on it directly, DDNS support and other neat features. All while having a lot of helpful articles for every use case. At the start of this all I had never played with anything related to networking and there's more than enough videos/articles/forums out there to go from newbie to expert with Mikrotik's ecosystem. For wifi I snagged a good deal on marketplace and got myself a **Unifi AP LR** which works well enough for my small apartment.
 
-I have what I consider a pretty minimal setup. I don't need more than one router and one switch. My NAS is used to store photos and documents and as backup storage.
+My first server is a **Raspberry Pi 4 4GB** which is currently used as a dedicated machine for exposed services. Any service that I want to share with my friends and family, or that I want to be accessible through the internet go on the Raspberry Pi. It's more than enough because I strongly prefer to keep my services private to avoid potential security problems.
 
-The 3 servers (HP, Beelink and Pi) are definitely overkill for the amount of software that I run on them, but the Beeklink was a recent purchase with the goal of being able to expand my setup further.
+For my two main servers I have a **HP Prodesk Mini G4 (i5-8500T, 8GB SODIM DDR4, 500GB SSD)** and a newly acquired **Beelink Mini S12 Pro (N100, 16GB DDR4, 500GB M.2)**. These are the two heavy lifters of my setup and where I run almost all of my containers and VMs.
 
-# Operating System and VMs
+For critical data like backups and photos, I found another marketplace deal: **Synology 918+ (8GB RAM, 256GB Cache)** with **2x Western Digital 3TB WD Red Plus** and **1x Seagate IronWolf ST4000VN006 4TB**. I run them on a SHR raid with tolerance to 1 drive fault. This was hands-down one of my best purchases. Not only does it "just work", but it opens up possibilities like buying another NAS for offsite backups. While I don’t mind experimenting with my servers, for my NAS, I prioritize ease of use and peace of mind - and Synology delivers that.
 
-For both of my main servers (Beelink and HP) I use Proxmox. I mostly use LXC containers with a single docker container in each of them. I've read about how it's not really recommended to do it that way, but that's how I found it to be the most convenient for me.
+To keep everything running through the countless power outages that we get here in Montreal, I invested in a **CyberPower UPS (CP1500AVRLCD3), 1500VA/900W**. It’s connected to my NAS to ensure a proper shutdown during prolonged outages. The goal here is to prevent power-related issues with the hard drives storing my important files.
 
-I only have a VM for a MongoDB service that I have to run which is in the public VLAN. I chose to turn it into a VM just to make sure that I have that extra layer of security.
+# Operating System
 
-The Raspberry Pi and all VMs/containers, run the latest version of Debian.
+For my two main servers (Beelink and HP), I use Proxmox. I mostly run LXC containers, each with a single Docker container. While I’ve read that this setup isn’t exactly recommended, I’ve found it the most convenient for my needs.
 
-# Software
+I only have one VM—a MongoDB service running in the public VLAN. I opted for a VM here to add an extra layer of security.
 
-Every service that I run is through docker containers. Each service's host machine is configured through Ansible playbooks that are all available [as a Github repo](https://github.com/lorenzopicoli/selfhosted).
+The Raspberry Pi, along with all VMs and containers, runs the latest version of Debian.
 
-The services that I run in the HP machine are:
+# Services
+
+I use Docker containers for all my services. If I come across a service that isn’t pre-containerized (e.g., Fava), I containerize it myself. This consistency makes spinning up services and backing up volumes much easier. All the services below, along with their host machines, are configured via Ansible playbooks, which you can find in my [selfhosted Github repo](https://github.com/lorenzopicoli/selfhosted).
+
+## Services on the HP machine:
 
 - [Vaultwarden](https://github.com/dani-garcia/vaultwarden): password manager
 - [Syncthing](https://docs.linuxserver.io/images/docker-syncthing/): used to keep my obsidian files in sync across all of my devices
@@ -72,33 +57,33 @@ The services that I run in the HP machine are:
 - [Hoarder](https://hoarder.app/): A bookmark manager
 - [Dozzle](https://dozzle.dev/): A service that aggregates basic docker container's informations and logs. Useful to quickly debug what might be going on when a service is down
 
-The services that live in the Beelink are:
+## Services on the Beelink:
 
-- [Traefik](https://github.com/traefik/traefik): reverse proxy
 - [Pi-Hole](https://github.com/pi-hole/pi-hole): a DNS server which also blocks tracking and ads
 - [Nginx proxy manager](https://nginxproxymanager.com/): the reverse proxy used by all of my private services. I have a bit of a love/hate relationship with it and it might be gone in 2025
 - [Unifi controller](https://github.com/linuxserver/docker-unifi-network-application)
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma): helps me keep track if any services goes down. It notifies me on telegram which helps me not lose any data because I didn't realize a service was down
 
-The services that are exposed to the internet and run on the raspberry pi are:
+## Services on the Raspberry Pi
 
+- [Traefik](https://github.com/traefik/traefik): reverse proxy
 - [Your Spotify](https://github.com/Yooooomi/your_spotify)
 
-The NAS runs the following services:
+## Services on the NAS
 
-- Active backup
-- Hyper backup
-- Synology Photos
+- [Active backup](https://www.synology.com/en-global/dsm/feature/active-backup-business/pc): used to backup all the docker volumes
+- [Hyper backup](https://www.synology.com/en-global/dsm/feature/hyper_backup): which I use to save my files to an external hard drive in case I need to recover the NAS
+- [Synology Photos](https://www.synology.com/en-global/dsm/feature/photos)
 
-# Network
+# Networking
 
 I try to also keep my network setup simple and straight to the point. The only 3 things that matter in my network setup are: be secure, be convenient and be reliable.
 
 I have currently 3 VLANs:
 
-- Secure: allowed to access all other VLANs. Restricted to my secure wifi, and trusted servers
-- Public: this is only really used by my raspberry pi and it's the only VLAN that accepts requests from the internet
-- Wireguard: I don't quite remember why, but I had to setup a separate VLAN for wireguard, but it acts the same as the secure VLAN
+- **Secure**: allowed to access all other VLANs. Restricted to my secure wifi, and trusted servers
+- **Public**: this is only really used by my raspberry pi and it's the only VLAN that accepts requests from the internet
+- **Wireguard**: I don't quite remember why, but I had to setup a separate VLAN for wireguard, but it acts the same as the secure VLAN
 
 When it comes to firewall there are only a few rules:
 
@@ -115,7 +100,7 @@ It took me a great deal of luck to find a copy of the database in a random folde
 
 With that being said, most of the things that I host aren't critical (ie. if I lose my DNS query history, it's not a big deal), and the things that are critical are stored in two different ways (ie. my photos are still in Google Photos for now).
 
-For the most part I use Active Backup to automatically SSH into my docker instances and copy the docker volumes folder. Recovering isn't always straightforward, but it should work in most cases. This approach also has some weird permission problems.
+**For the most part I use Active Backup to automatically SSH into my docker instances and copy the docker volumes folder. Recovering isn't always straightforward, but it should work in most cases. This approach also has some weird permission problems.**
 
 # Lessons learned in 2024
 
@@ -126,7 +111,8 @@ I learned to love Ansible even more than I did before. After many months of not 
 
 For posteriority, this is what I would like to tackle at some point in 2025:
 
-- Aim for a higher up time percentage (my spotify instance was down for a few months in 2024)
-- Improve my backup system. I would like to buy a second NAS and leave it at a family/friend's house as an offsite backup. This would potentially allow me to ditch Google Photos finally
-- Host Plex
-- Host Immich
+- Improve uptime (e.g., my Spotify instance was down for months in 2024)
+- Upgrade my backup system (e.g., buy a second NAS for offsite backups or find a cheap cloud provider)
+- Ditch Google Photos by setting up a better photo backup system
+- Host Plex.
+- Host Immich.

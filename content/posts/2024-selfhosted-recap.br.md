@@ -1,128 +1,107 @@
 +++
-title = "Meu Setup Self-hosted em 2024"
+title = "Um Retrato da Minha Jornada de Self-Hosting em 2024"
 date = "2024-12-21T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
-showTableOfContents = true
 draft = false
 +++
 
-# Meu Setup Self-hosted em 2024
+# Um Retrato da Minha Jornada de Self-Hosting em 2024
 
 {{< table_of_contents >}}
 
-Meu serviço self-hosted inicial foi o Pi-hole. Em fevereiro de 2023, consegui um servidor na Hetzner e instalei o Pi-hole nele.
-Quase um ano depois, por volta do Natal de 2023, eu queria escrever um resumo do meu ano de selfhosting, mas a vida aconteceu e nunca consegui escrever sobre isso. Agora, dois anos após começar com self hosting, me arrependo de não poder voltar e ver o quanto progredi.
-É por isso que estou me preparando para 2025 compartilhando minha configuração de 2024 e o estado atual das coisas.
-Antes de mergulharmos nisso, é importante saber que meus objetivos nos últimos anos têm sido:
+O que começou como um simples experimento com o Pi-hole em fevereiro de 2023 se transformou em uma obsessão completa por self-hosting.
+Quase um ano depois, por volta do Natal de 2023, eu queria escrever um resumo do meu ano com self-hosting, mas a vida aconteceu e nunca consegui fazer isso. Agora, dois anos depois, me arrependo de não ter registrado como as coisas evoluíram.
 
-1. **Ter o máximo possível de controle sobre meus dados** através de self hosting sempre que possível, mantendo o controle das minhas finanças em texto puro e criando uma única base de conhecimento para cada aspecto da minha vida
-2. **Descobrir novos serviços** que facilitem minha vida
-3. **Aprender coisas** novas no processo
+Por isso, estou me preparando para 2025 compartilhando meu setup de 2024 e o estado atual das coisas.
 
-# Equipamento
+Antes de mergulhar nos detalhes, é importante saber que meus objetivos nos últimos anos têm sido:
 
-Vamos começar com o equipamento!
+1. **Controlar ao máximo meus dados**, self-hosting sempre que possível, [organizando minhas finanças em texto puro](https://plaintextaccounting.org/) e criando uma base de conhecimento única para todos os aspectos da minha vida.
+2. **Descobrir novos serviços** que facilitem minha vida.
+3. **Aprender coisas novas** no processo.
 
-- Roteador Mikrotik hEX RB750Gr3
-- Switch comprado usado
-- Unifi AP LR
-- HP Prodesk Mini G4
-  - i5-8500T
-  - 8GB SODIM DDR4
-  - 500GB SSD
-- Beelink Mini S12 Pro
-  - N100
-  - 16GB DDR4
-  - 500GB M.2
-- Raspberry Pi 4 4GB
-- Synology 918+
-  - 8GB RAM
-  - 256GB Cache
-  - 2x Western Digital 3TB WD Red Plus
-  - 1x Seagate IronWolf ST4000VN006 4TB
-  - RAID SHR com tolerância a falha de 1 disco
-- No-break CyberPower CP1500AVRLCD3, 1500VA/900W
+# Equipamentos
 
-Tenho o que considero uma configuração bastante minimalista. Não preciso mais do que um roteador e um switch. Meu NAS é usado para armazenar fotos e documentos e como armazenamento de backup.
+Vamos começar pelos equipamentos!
 
-Os 3 servidores (HP, Beelink e Pi) são definitivamente exagerados para a quantidade de software que executo neles, mas o Beelink foi uma compra recente com o objetivo de poder expandir ainda mais minha configuração.
+Escolhi o **Mikrotik hEX RB750Gr3** como meu roteador. Eu adoro esse dispositivo porque ele oferece várias funcionalidades como instalar Wireguard diretamente, suporte a DDNS e outros recursos legais. Tudo isso com uma abundância de artigos úteis para qualquer caso de uso. No início, eu nunca tinha mexido com nada relacionado a redes, mas há conteúdo suficiente (vídeos, artigos, fóruns) para ir de iniciante a expert no ecossistema Mikrotik. Para o Wi-Fi, consegui um bom negócio no marketplace e comprei um **Unifi AP LR**, que funciona bem para meu apartamento pequeno.
 
-# Sistema Operacional e VMs
+Meu primeiro servidor é um **Raspberry Pi 4 4GB**, usado como máquina dedicada para serviços expostos. Qualquer serviço que quero compartilhar com amigos, família ou que precisa ser acessível pela internet fica no Raspberry Pi. Ele é mais do que suficiente porque eu prefiro manter os serviços privados para evitar problemas de segurança.
 
-Para ambos os meus servidores principais, uso Proxmox. Uso principalmente containers LXC com um único container docker em cada um deles. Li sobre como isso não é realmente recomendado, mas foi assim que achei mais conveniente para mim.
+Meus dois servidores principais são um **HP Prodesk Mini G4 (i5-8500T, 8GB SODIM DDR4, 500GB SSD)** e um recém-adquirido **Beelink Mini S12 Pro (N100, 16GB DDR4, 500GB M.2)**. Esses são os "pesos-pesados" do meu setup e onde eu rodo quase todos os containers e VMs.
 
-Só tenho uma VM para um serviço MongoDB que preciso rodar e que está na VLAN pública. Escolhi transformá-lo em VM apenas para garantir que tenho essa camada extra de segurança.
+Para dados críticos como backups e fotos, achei outro bom negócio no marketplace: um **Synology 918+ (8GB RAM, 256GB Cache)** com **2x Western Digital 3TB WD Red Plus** e **1x Seagate IronWolf ST4000VN006 4TB**. Uso RAID SHR com tolerância para falha de 1 disco. Foi uma das melhores compras que fiz. Além de "simplesmente funcionar", isso abre possibilidades como comprar outro NAS para backups fora de casa. Enquanto eu não me importo de experimentar com os servidores, no caso do NAS, priorizo facilidade de uso e paz de espírito – e a Synology entrega isso.
 
-# Software
+Para manter tudo funcionando durante as incontáveis quedas de energia que enfrentamos aqui em Montreal, investi em um **CyberPower UPS (CP1500AVRLCD3), 1500VA/900W**. Ele está conectado ao meu NAS para garantir um desligamento adequado durante apagões prolongados. O objetivo é prevenir problemas relacionados a energia nos discos rígidos que armazenam meus arquivos importantes.
 
-Todos os serviços que executo são através de containers docker. Cada máquina host de serviço é configurada através de playbooks Ansible que estão todos disponíveis [como um repositório Github](https://github.com/lorenzopicoli/selfhosted).
+# Sistema Operacional
 
-Os serviços que executo na máquina HP são:
+Nos dois servidores principais (Beelink e HP), eu uso Proxmox. Eu rodo principalmente containers LXC, cada um com um único container Docker. Apesar de ler que essa configuração não é muito recomendada, é a mais conveniente para mim.
+
+Tenho apenas uma VM: um serviço MongoDB rodando na VLAN pública. Optei por usar uma VM para adicionar uma camada extra de segurança.
+
+O Raspberry Pi, junto com todas as VMs e containers, roda a última versão do Debian.
+
+# Serviços
+
+Uso containers Docker para todos os meus serviços. Se encontro um serviço que não está pré-containerizado (ex.: Fava), eu mesmo crio o container. Essa consistência facilita rodar novos serviços e fazer backup dos volumes. Todos os serviços abaixo, junto com os hosts, são configurados via playbooks do Ansible, que você pode encontrar no meu [repositório selfhosted no Github](https://github.com/lorenzopicoli/selfhosted).
+
+## Serviços no HP:
 
 - [Vaultwarden](https://github.com/dani-garcia/vaultwarden): gerenciador de senhas
-- [Syncthing](https://docs.linuxserver.io/images/docker-syncthing/): usado para manter meus arquivos do Obsidian sincronizados em todos os meus dispositivos
-- Uma instância MongoDB: esta é a que está exposta à internet e é usada pelos serviços do Raspberry Pi
-- [Rastreador de Localização](https://github.com/lorenzopicoli/location-tracker): um backend [Owntracks](https://owntracks.org/) que eu mesmo construí
-- [Forgejo](https://codeberg.org/forgejo/forgejo): Como um Github privado que uso para controle de versão das minhas finanças e diário sem ter que compartilhar meus dados com o Github
-- Lofinance: Uma versão dockerizada do [Fava](https://github.com/beancount/fava) que eu criei e que também sincroniza automaticamente com minhas finanças em texto puro versionadas
-- [Hoarder](https://hoarder.app/): Um gerenciador de favoritos
-- [Dozzle](https://dozzle.dev/): Um serviço que agrega informações básicas e logs dos containers docker. Útil para debugar rapidamente o que pode estar acontecendo quando um serviço está fora do ar
+- [Syncthing](https://docs.linuxserver.io/images/docker-syncthing/): mantém meus arquivos do Obsidian sincronizados em todos os dispositivos
+- Uma instância do MongoDB: exposta à internet e usada pelos serviços do Raspberry Pi
+- [Location Tracker](https://github.com/lorenzopicoli/location-tracker): backend para o [Owntracks](https://owntracks.org/) que eu mesmo desenvolvi
+- [Forgejo](https://codeberg.org/forgejo/forgejo): como um Github privado, onde versiono minhas finanças e diário sem precisar dar meus dados ao Github
+- Lofinance: Versão dockerizada do [Fava](https://github.com/beancount/fava) que criei, sincronizada automaticamente com minhas finanças em texto puro
+- [Hoarder](https://hoarder.app/): gerenciador de favoritos
+- [Dozzle](https://dozzle.dev/): agrega logs e informações básicas de containers Docker para depuração rápida
 
-Os serviços que rodam no Beelink são:
+## Serviços no Beelink:
+
+- [Pi-Hole](https://github.com/pi-hole/pi-hole): servidor DNS que bloqueia rastreamento e anúncios
+- [Nginx Proxy Manager](https://nginxproxymanager.com/): proxy reverso usado pelos serviços privados
+- [Unifi Controller](https://github.com/linuxserver/docker-unifi-network-application)
+- [Uptime Kuma](https://github.com/louislam/uptime-kuma): monitora a disponibilidade dos serviços e me notifica no Telegram quando algo cai
+
+## Serviços no Raspberry Pi:
 
 - [Traefik](https://github.com/traefik/traefik): proxy reverso
-- [Pi-Hole](https://github.com/pi-hole/pi-hole): um servidor DNS que também bloqueia rastreamento e anúncios
-- [Nginx proxy manager](https://nginxproxymanager.com/): o proxy reverso usado por todos os meus serviços privados. Tenho uma relação de amor e ódio com ele e ele pode não estar mais aqui em 2025
-- [Unifi controller](https://github.com/linuxserver/docker-unifi-network-application)
-- [Uptime Kuma](https://github.com/louislam/uptime-kuma): me ajuda a acompanhar se algum serviço cai. Ele me notifica no Telegram, o que me ajuda a não perder dados por não perceber que um serviço estava fora do ar
-
-Os serviços que estão expostos à internet e rodam no Raspberry Pi são:
-
 - [Your Spotify](https://github.com/Yooooomi/your_spotify)
 
-O NAS roda os seguintes serviços:
+## Serviços no NAS:
 
-- Active backup
-- Hyper backup
-- Synology Photos
+- [Active Backup](https://www.synology.com/en-global/dsm/feature/active-backup-business/pc): backup automático dos volumes Docker
+- [Hyper Backup](https://www.synology.com/en-global/dsm/feature/hyper_backup): backup dos arquivos para um HD externo
+- [Synology Photos](https://www.synology.com/en-global/dsm/feature/photos)
 
 # Rede
 
-Tento manter minha configuração de rede simples e direta ao ponto. As únicas 3 coisas que importam na minha configuração de rede são: ser segura, ser conveniente e ser confiável.
+Minha configuração de rede é simples e direta: segurança, conveniência e confiabilidade.
 
-Atualmente tenho 3 VLANs:
+Atualmente, tenho 3 VLANs:
 
-- Segura: permitido acesso a todas as outras VLANs. Restrito ao meu wifi seguro e servidores confiáveis
-- Pública: isso só é realmente usado pelo meu Raspberry Pi e é a única VLAN que aceita requisições da internet
-- Wireguard: não me lembro exatamente por quê, mas tive que configurar uma VLAN separada para o Wireguard, mas ela funciona igual à VLAN segura
+- **Secure**: acessa todas as outras VLANs, restrita ao Wi-Fi seguro e servidores confiáveis
+- **Public**: usada apenas pelo Raspberry Pi, a única que aceita requisições da internet
+- **Wireguard**: uma VLAN separada para Wireguard, mas funciona como a VLAN segura
 
-Quanto ao firewall, existem apenas algumas regras:
+Regras do firewall:
 
-1. Apenas tráfego nas portas 80, 443 e a porta do Wireguard são permitidos e são roteados para um endereço IP específico (proxy reverso Traefik)
-2. Quaisquer requisições de saída para a porta 53 são redirecionadas para o Pi-hole. Isso é necessário porque [alguns fabricantes de dispositivos (olhando para você, Google) escolhem ignorar o servidor DNS do DHCP](https://www.reddit.com/r/googlehome/comments/8917ci/google_home_mini_using_its_own_dns_addresses_are/)
-
-Meu provedor de internet muda meu endereço IP de vez em quando ou sempre que meu roteador é desconectado. Quando isso acontece, não posso mais acessar a API da Namecheap até manualmente liberar meu novo IP. Por isso, uso o [recurso Cloud da Mikrotik](https://wiki.mikrotik.com/Manual:IP/Cloud) para manter meus serviços sempre disponíveis. Aponto meus domínios para o domínio deles, que é configurado para sempre apontar para meu roteador. É como DNS dinâmico com passos extras.
+1. Apenas tráfego nas portas 80, 443 e a porta do Wireguard são permitidos, roteados para um IP específico (proxy reverso Traefik)
+2. Requisições na porta 53 são redirecionadas para o Pi-Hole, necessário porque [alguns fabricantes ignoram o servidor DNS do DHCP](https://www.reddit.com/r/googlehome/comments/8917ci/google_home_mini_using_its_own_dns_addresses_are/)
 
 # Backups
 
-Há algumas semanas, eu estava atualizando alguns serviços e reajustando algumas das minhas configurações do Ansible, e não fui muito cuidadoso com o que estava fazendo, já que sabia que sempre poderia contar com meus backups. Então continuei alterando meu arquivo docker-compose e reiniciei meu banco de dados Mongo, que é usado pelo serviço YourSpotify que compartilho com meus amigos. Quando executei o serviço, percebi que todos os dados tinham simplesmente sumido... pior ainda, fui verificar meu backup e descobri que por quase um ano inteiro, minha tarefa de backup estava fazendo backup da pasta errada...
+Recentemente perdi quase um ano de dados porque meu backup estava apontando para a pasta errada. Isso me fez perceber a importância de um bom sistema de backup. Atualmente, uso o Active Backup para fazer backup dos volumes Docker via SSH, mas ainda há problemas de permissões.
 
-Foi preciso muita sorte para encontrar uma cópia do banco de dados em uma pasta aleatória (não me pergunte como foi parar lá). Então posso dizer com certeza que minha falta de uma boa configuração de backup foi sentida durante 2024.
+# O que Aprendi em 2024
 
-Dito isso, a maioria das coisas que hospedo não são críticas (ou seja, se eu perder meu histórico de consultas DNS, não é um grande problema), e as coisas que são críticas são armazenadas de duas maneiras diferentes (ou seja, minhas fotos ainda estão no Google Photos por enquanto).
+- Um setup enxuto é essencial: menos mudanças, mais estabilidade
+- Ansible continua sendo meu maior aliado: reiniciar servidores é tão simples quanto rodar um playbook
 
-Na maior parte, uso o Active Backup para automaticamente fazer SSH nos meus containers docker e copiar a pasta de volumes docker. A recuperação nem sempre é direta, mas deve funcionar na maioria dos casos. Essa abordagem também tem alguns problemas estranhos de permissão.
+# Desejos para 2025
 
-# Lições aprendidas em 2024
-
-Aprendi que devo buscar uma configuração enxuta. Não mudei muita coisa em 2024 e isso foi devido à minha configuração ser resiliente e simples.
-Aprendi a amar o Ansible ainda mais do que antes. Depois de muitos meses sem mexer nos meus servidores, voltar a eles foi tão simples quanto lembrar como rodar um playbook.
-
-# Lista de Desejos para 2025
-
-Para posteridade, isto é o que eu gostaria de resolver em algum momento em 2025:
-
-- Buscar uma porcentagem maior de tempo de atividade (minha instância do Spotify ficou fora do ar por alguns meses em 2024)
-- Melhorar meu sistema de backup. Gostaria de comprar um segundo NAS e deixá-lo na casa de um familiar/amigo como backup off-site. Isso potencialmente me permitiria abandonar o Google Photos finalmente
-- Hospedar Plex
-- Hospedar Immich
+- Melhorar uptime (meu YourSpotify ficou meses fora do ar em 2024)
+- Melhorar o sistema de backup (ex.: comprar um segundo NAS ou usar um serviço na nuvem)
+- Abandonar o Google Photos
+- Hospedar Plex e Immich

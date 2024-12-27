@@ -30,6 +30,12 @@ h1 {
   margin-top: 2rem;
 }
 
+h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
 /* Single post */
 .article-date {
   font-size: 0.9rem;
@@ -118,6 +124,10 @@ a:hover {
 
 a {
   color: var(--link-color);
+}
+
+strong {
+  color: rgb(208, 162, 21);
 }
 
 hr {
