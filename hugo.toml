@@ -1,6 +1,7 @@
 baseURL = 'https://lorenzomodolo.com/'
 languageCode = 'en-us'
 title = "Lorenzo"
+copyright = '© Lorenzo Piccoli Módolo'
 
 enableRobotsTXT = true
 
@@ -25,4 +26,11 @@ defaultContentLanguage = "en"
 [services]
   [services.googleAnalytics]
     id = 'G-D74E9WRELM'
+
+
+[params]
+  [params.author]
+    email = 'lorenzopicoli@me.com'
+    name = 'Lorenzo Piccoli Módolo'
+
 
