@@ -10,7 +10,7 @@
         <a href="{{ .Site.Home.RelPermalink }}" class="site-title">{{ .Site.Title }}</a>
     </span>
     <span class="menu">
-	    <a href="{{ .Permalink }}/index.xml" target="_blank">RSS</a> 
+	    <a href="{{ .Site.Home.Permalink }}/index.xml" target="_blank">RSS</a> 
         <a href="{{ relLangURL "about" }}   ">{{ i18n "about" | default "about" }}</a>
         {{ if .IsTranslated }}
         {{ range .AllTranslations }}
