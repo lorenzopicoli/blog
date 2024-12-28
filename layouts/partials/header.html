@@ -1,17 +1,16 @@
 <head>
 {{ template "_internal/google_analytics.html" . }}
+        <link rel="alternate"
+            type="application/rss+xml"
+            href="{{.Site.BaseURL }}/index.xml"
+            title="{{ .Site.Title }}">
 </head>
 <nav class="header">
     <span class="title-container">
         <a href="{{ .Site.Home.RelPermalink }}" class="site-title">{{ .Site.Title }}</a>
     </span>
     <span class="menu">
-        {{/*  <a href="{{ relLangURL "projects" }}   ">{{ i18n "projects" | default "projects" }}</a>  */}}
-        <link rel="alternate"
-            type="application/rss+xml"
-            href="{{.Site.BaseURL }}/index.xml"
-            title="{{ .Site.Title }}">
-
+	    <a href="{{ .Permalink }}/index.xml" target="_blank">RSS</a> 
         <a href="{{ relLangURL "about" }}   ">{{ i18n "about" | default "about" }}</a>
         {{ if .IsTranslated }}
         {{ range .AllTranslations }}
