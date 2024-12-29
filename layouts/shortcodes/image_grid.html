@@ -1,0 +1,11 @@
+<div class="image-grid">
+  {{ $json := .Inner | unmarshal }} {{ range $json.images }} {{ $image :=
+  $.Page.Resources.GetMatch .src }}
+  <div class="image-grid-item">
+    <img src="{{ if $image }}{{ $image.RelPermalink }}{{ else }}{{ .src }}{{ end
+    }}" alt="{{ .alt | default "Project screenshot" }}"> {{ with .caption }}
+    <div class="image-grid-caption">{{ . }}</div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
