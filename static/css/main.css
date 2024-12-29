@@ -222,3 +222,7 @@ footer svg {
 .image-grid-item:hover .image-grid-caption {
   opacity: 1;
 }
+
+.lb-outerContainer {
+  background-color: var(--bg-color) !important;
+}

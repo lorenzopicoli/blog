@@ -4,6 +4,7 @@ date = "2024-09-02T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
 draft = false
 isMajor = true 
+isOngoing = true
 +++
 
 Wealthsimple is an investment/banking company used in North America, and I use it for many of my financial transactions. One of its major limitations is the lack of export options. To address this, I built this browser extension (supporting Google Chrome and Firefox) that automatically exports your transactions to CSV with a single click.
