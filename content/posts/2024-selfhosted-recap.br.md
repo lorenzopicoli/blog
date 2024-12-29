@@ -5,8 +5,6 @@ author = "Lorenzo Piccoli Módolo"
 draft = false
 +++
 
-# Um Retrato da Minha Jornada de Self-Hosting em 2024
-
 {{< table_of_contents >}}
 
 O que começou como um simples experimento com o Pi-hole em fevereiro de 2023 se transformou em uma obsessão completa por self-hosting.
