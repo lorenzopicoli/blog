@@ -3,6 +3,7 @@ title = "Twitter Score: detect bot and troll accounts on Twitter"
 date = "2020-05-07T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
 draft = false
+isMajor = true
 +++
 
 The goal of this project is to score a Twitter account based on its activity and provide quick insight into how the account behaves and if it acts like a normal account.

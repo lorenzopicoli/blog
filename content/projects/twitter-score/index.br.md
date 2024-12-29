@@ -3,6 +3,7 @@ title = "Twitter Score: detector de bots e trolls no twitter"
 date = "2020-05-07T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
 draft = false
+isMajor = true
 +++
 
 O objetivo deste projeto é pontuar uma conta do Twitter com base em sua atividade e fornecer uma rápida análise sobre como a conta se comporta e se age como uma conta normal.

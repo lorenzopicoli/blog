@@ -3,6 +3,7 @@ title = "Flash Study: a flash cards app for iOS"
 date = "2013-08-07T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
 draft = false
+isMajor = true
 +++
 
 Flash Study was a flash cards app that allowed students from all over the world to memorize information. The app was written in Objective-C and used Storyboards for the UI. Flash Study was featured as:

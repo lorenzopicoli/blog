@@ -3,6 +3,7 @@ title = "Flash Study: um aplicativo iOS de flash cards"
 date = "2013-08-07T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
 draft = false
+isMajor = true
 +++
 
 Flash Study foi um aplicativo de cartões de memorização que permitia estudantes de todo o mundo memorizarem qualquer tipo de informação. O aplicativo foi desenvolvido em Objective-C e utilizava Storyboards para a interface do usuário. O Flash Study foi destacado como:
@@ -12,7 +13,7 @@ Flash Study foi um aplicativo de cartões de memorização que permitia estudant
 3. Um dos top 60 aplicativos para iPhone da Nova Zelândia
 4. App do dia no podcast [Cocatech](https://cocatech.com.br/cast)
 
-**Check this project on [Github](https://github.com/lorenzopicoli/FlashStudy)**
+**Confira esse projeto no [Github](https://github.com/lorenzopicoli/FlashStudy)**
 
 ---
 

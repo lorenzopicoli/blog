@@ -3,6 +3,7 @@ title = "Sark: compile e execute projetos Xcode de qualquer lugar"
 date = "2016-02-11T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
 draft = false
+isMajor = true
 +++
 
 Sark is effectively a lightweight GitHub Actions, but instead of running your actions in the cloud, you can host the server yourself on any Mac device. Sark will then help you build an Xcode project on your Mac from any OS without the use of any applications. All you need to do is set up your Mac and open a browser!
