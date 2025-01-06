@@ -1,6 +1,4 @@
-{{ define "main" }} {{ if .Title }}
-<h1>{{ .Title }}</h1>
-{{ end }} {{ .Content }}
+{{ define "main" }} {{ if .Title }} {{ end }} {{ .Content }}
 <div class="post-list">
   {{ $pages := where .Site.RegularPages "Section" "posts" }} {{ range
   ($pages.ByDate.Reverse) }}

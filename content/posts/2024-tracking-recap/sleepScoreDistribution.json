@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Distribution of sleep scores",
+  "height": 300,
+  "data": {
+    "values": [
+      { "bin": "0-6", "count": 35 },
+      { "bin": "6-13", "count": 0 },
+      { "bin": "13-20", "count": 1 },
+      { "bin": "20-26", "count": 1 },
+      { "bin": "26-33", "count": 1 },
+      { "bin": "33-40", "count": 2 },
+      { "bin": "40-46", "count": 4 },
+      { "bin": "46-53", "count": 3 },
+      { "bin": "53-60", "count": 4 },
+      { "bin": "60-66", "count": 3 },
+      { "bin": "66-73", "count": 30 },
+      { "bin": "73-80", "count": 42 },
+      { "bin": "80-86", "count": 151 },
+      { "bin": "86-93", "count": 139 },
+      { "bin": "93-100", "count": 95 }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "color": "#006D77"
+  },
+  "encoding": {
+    "x": {
+      "field": "bin",
+      "type": "ordinal",
+      "title": "Sleep Score Range",
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "title": "Number of Nights",
+      "axis": {
+        "grid": true
+      }
+    },
+    "tooltip": [
+      { "field": "bin", "title": "Score Range" },
+      { "field": "count", "title": "Nights" }
+    ]
+  },
+  "config": {
+    "text": {
+      "color": "rgb(224, 224, 224)",
+      "font": "monospace",
+      "lineHeight": 1.6,
+      "fontSize": 12
+    },
+    "legend": {
+      "labelColor": "rgb(224, 224, 224)",
+      "labelFont": "monospace",
+      "labelFontSize": 12,
+      "titleColor": "rgb(224, 224, 224)",
+      "titleFont": "monospace",
+      "titleLineHeight": 1.6,
+      "titleFontSize": 12
+    },
+    "axis": {
+      "labelColor": "rgb(224, 224, 224)",
+      "gridColor": "rgb(100, 100, 100)",
+      "titleColor": "rgb(224, 224, 224)",
+      "tickColor": "rgb(224, 224, 224)",
+      "domainColor": "rgb(224, 224, 224)",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelFont": "monospace",
+      "titleFont": "monospace"
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "title": { "color": "rgb(224, 224, 224)" }
+  },
+  "background": null,
+  "width": "container"
+}

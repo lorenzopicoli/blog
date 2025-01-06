@@ -1,0 +1,1517 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "format": { "type": "json" },
+    "values": [
+      {
+        "date_tz": "2024-01-31",
+        "max_apparent_temp": 36.996998,
+        "min_apparent_temp": 32.34014
+      },
+      {
+        "date_tz": "2024-02-01",
+        "max_apparent_temp": 38.5193,
+        "min_apparent_temp": 27.71017
+      },
+      {
+        "date_tz": "2024-02-02",
+        "max_apparent_temp": 36.41216,
+        "min_apparent_temp": 27.747524
+      },
+      {
+        "date_tz": "2024-02-03",
+        "max_apparent_temp": 34.787632,
+        "min_apparent_temp": 27.75811
+      },
+      {
+        "date_tz": "2024-02-04",
+        "max_apparent_temp": 35.21445,
+        "min_apparent_temp": 29.2902
+      },
+      {
+        "date_tz": "2024-02-05",
+        "max_apparent_temp": 32.44861,
+        "min_apparent_temp": 29.077885
+      },
+      {
+        "date_tz": "2024-02-06",
+        "max_apparent_temp": 37.34791,
+        "min_apparent_temp": 28.704376
+      },
+      {
+        "date_tz": "2024-02-11",
+        "max_apparent_temp": 33.08411,
+        "min_apparent_temp": 28.730583
+      },
+      {
+        "date_tz": "2024-02-13",
+        "max_apparent_temp": 35.443054,
+        "min_apparent_temp": 28.119953
+      },
+      {
+        "date_tz": "2024-02-14",
+        "max_apparent_temp": 37.190197,
+        "min_apparent_temp": 27.928879
+      },
+      {
+        "date_tz": "2024-02-15",
+        "max_apparent_temp": 34.525455,
+        "min_apparent_temp": 30.825264
+      },
+      {
+        "date_tz": "2024-02-16",
+        "max_apparent_temp": 33.446106,
+        "min_apparent_temp": 27.417318
+      },
+      {
+        "date_tz": "2024-02-17",
+        "max_apparent_temp": 35.406754,
+        "min_apparent_temp": 27.05944
+      },
+      {
+        "date_tz": "2024-02-18",
+        "max_apparent_temp": 34.842186,
+        "min_apparent_temp": 22.885332
+      },
+      {
+        "date_tz": "2024-02-19",
+        "max_apparent_temp": -0.74743795,
+        "min_apparent_temp": -17.34962
+      },
+      {
+        "date_tz": "2024-02-20",
+        "max_apparent_temp": -12.95283,
+        "min_apparent_temp": -12.95283
+      },
+      {
+        "date_tz": "2024-02-21",
+        "max_apparent_temp": -4.786519,
+        "min_apparent_temp": -6.035038
+      },
+      {
+        "date_tz": "2024-02-22",
+        "max_apparent_temp": -0.33559918,
+        "min_apparent_temp": -6.5696564
+      },
+      {
+        "date_tz": "2024-02-23",
+        "max_apparent_temp": 2.4923115,
+        "min_apparent_temp": -14.890554
+      },
+      {
+        "date_tz": "2024-02-24",
+        "max_apparent_temp": -15.747806,
+        "min_apparent_temp": -23.207344
+      },
+      {
+        "date_tz": "2024-02-25",
+        "max_apparent_temp": -4.5723295,
+        "min_apparent_temp": -17.140648
+      },
+      {
+        "date_tz": "2024-02-26",
+        "max_apparent_temp": -1.1915543,
+        "min_apparent_temp": -9.245869
+      },
+      {
+        "date_tz": "2024-02-27",
+        "max_apparent_temp": 6.033827,
+        "min_apparent_temp": -8.425628
+      },
+      {
+        "date_tz": "2024-02-28",
+        "max_apparent_temp": 9.439604,
+        "min_apparent_temp": -13.478788
+      },
+      {
+        "date_tz": "2024-02-29",
+        "max_apparent_temp": -17.127443,
+        "min_apparent_temp": -22.736853
+      },
+      {
+        "date_tz": "2024-03-01",
+        "max_apparent_temp": -2.1882715,
+        "min_apparent_temp": -18.129822
+      },
+      {
+        "date_tz": "2024-03-02",
+        "max_apparent_temp": 0.64119864,
+        "min_apparent_temp": -8.104093
+      },
+      {
+        "date_tz": "2024-03-03",
+        "max_apparent_temp": 5.6000767,
+        "min_apparent_temp": -3.5677629
+      },
+      {
+        "date_tz": "2024-03-04",
+        "max_apparent_temp": 9.596716,
+        "min_apparent_temp": -6.2321672
+      },
+      {
+        "date_tz": "2024-03-05",
+        "max_apparent_temp": 8.270193,
+        "min_apparent_temp": -1.4104731
+      },
+      {
+        "date_tz": "2024-03-06",
+        "max_apparent_temp": 1.2174659,
+        "min_apparent_temp": -3.1630821
+      },
+      {
+        "date_tz": "2024-03-07",
+        "max_apparent_temp": 3.1362267,
+        "min_apparent_temp": -7.231653
+      },
+      {
+        "date_tz": "2024-03-08",
+        "max_apparent_temp": 2.5648127,
+        "min_apparent_temp": -10.096995
+      },
+      {
+        "date_tz": "2024-03-09",
+        "max_apparent_temp": -0.0807004,
+        "min_apparent_temp": -6.110045
+      },
+      {
+        "date_tz": "2024-03-10",
+        "max_apparent_temp": -1.553087,
+        "min_apparent_temp": -9.4116335
+      },
+      {
+        "date_tz": "2024-03-11",
+        "max_apparent_temp": -5.6144257,
+        "min_apparent_temp": -9.853956
+      },
+      {
+        "date_tz": "2024-03-12",
+        "max_apparent_temp": 1.9265604,
+        "min_apparent_temp": -10.368147
+      },
+      {
+        "date_tz": "2024-03-13",
+        "max_apparent_temp": 2.17134,
+        "min_apparent_temp": -9.290775
+      },
+      {
+        "date_tz": "2024-03-14",
+        "max_apparent_temp": 8.860893,
+        "min_apparent_temp": -5.9847355
+      },
+      {
+        "date_tz": "2024-03-15",
+        "max_apparent_temp": 7.122349,
+        "min_apparent_temp": -3.3150373
+      },
+      {
+        "date_tz": "2024-03-16",
+        "max_apparent_temp": 2.9373727,
+        "min_apparent_temp": -3.6599426
+      },
+      {
+        "date_tz": "2024-03-17",
+        "max_apparent_temp": 2.3947296,
+        "min_apparent_temp": -3.5287302
+      },
+      {
+        "date_tz": "2024-03-18",
+        "max_apparent_temp": -0.76350784,
+        "min_apparent_temp": -6.6951923
+      },
+      {
+        "date_tz": "2024-03-19",
+        "max_apparent_temp": -3.7794518,
+        "min_apparent_temp": -10.562256
+      },
+      {
+        "date_tz": "2024-03-20",
+        "max_apparent_temp": -1.79322,
+        "min_apparent_temp": -8.834363
+      },
+      {
+        "date_tz": "2024-03-21",
+        "max_apparent_temp": -10.361407,
+        "min_apparent_temp": -16.342535
+      },
+      {
+        "date_tz": "2024-03-22",
+        "max_apparent_temp": -8.580915,
+        "min_apparent_temp": -18.250444
+      },
+      {
+        "date_tz": "2024-03-23",
+        "max_apparent_temp": -8.600558,
+        "min_apparent_temp": -12.501854
+      },
+      {
+        "date_tz": "2024-03-24",
+        "max_apparent_temp": -2.3818204,
+        "min_apparent_temp": -13.258145
+      },
+      {
+        "date_tz": "2024-03-25",
+        "max_apparent_temp": 2.54032,
+        "min_apparent_temp": -11.638931
+      },
+      {
+        "date_tz": "2024-03-26",
+        "max_apparent_temp": 9.888252,
+        "min_apparent_temp": -8.365259
+      },
+      {
+        "date_tz": "2024-03-27",
+        "max_apparent_temp": 11.810802,
+        "min_apparent_temp": -1.3383651
+      },
+      {
+        "date_tz": "2024-03-28",
+        "max_apparent_temp": 4.507107,
+        "min_apparent_temp": -1.966608
+      },
+      {
+        "date_tz": "2024-03-29",
+        "max_apparent_temp": 4.241352,
+        "min_apparent_temp": -5.714704
+      },
+      {
+        "date_tz": "2024-03-30",
+        "max_apparent_temp": 0.4547181,
+        "min_apparent_temp": -8.739072
+      },
+      {
+        "date_tz": "2024-03-31",
+        "max_apparent_temp": 3.0544028,
+        "min_apparent_temp": -6.3123856
+      },
+      {
+        "date_tz": "2024-04-01",
+        "max_apparent_temp": 6.640621,
+        "min_apparent_temp": -5.751196
+      },
+      {
+        "date_tz": "2024-04-02",
+        "max_apparent_temp": 5.3178844,
+        "min_apparent_temp": -7.460552
+      },
+      {
+        "date_tz": "2024-04-03",
+        "max_apparent_temp": 4.2740726,
+        "min_apparent_temp": -4.5774302
+      },
+      {
+        "date_tz": "2024-04-04",
+        "max_apparent_temp": -4.8484726,
+        "min_apparent_temp": -8.684931
+      },
+      {
+        "date_tz": "2024-04-05",
+        "max_apparent_temp": -0.9937358,
+        "min_apparent_temp": -5.3771305
+      },
+      {
+        "date_tz": "2024-04-06",
+        "max_apparent_temp": 2.3706036,
+        "min_apparent_temp": -4.704096
+      },
+      {
+        "date_tz": "2024-04-07",
+        "max_apparent_temp": 10.699818,
+        "min_apparent_temp": -6.3596754
+      },
+      {
+        "date_tz": "2024-04-08",
+        "max_apparent_temp": 14.55146,
+        "min_apparent_temp": -4.075903
+      },
+      {
+        "date_tz": "2024-04-09",
+        "max_apparent_temp": 14.474945,
+        "min_apparent_temp": -2.2791464
+      },
+      {
+        "date_tz": "2024-04-10",
+        "max_apparent_temp": 14.523205,
+        "min_apparent_temp": -0.7386904
+      },
+      {
+        "date_tz": "2024-04-11",
+        "max_apparent_temp": 12.07954,
+        "min_apparent_temp": 4.80785
+      },
+      {
+        "date_tz": "2024-04-12",
+        "max_apparent_temp": 19.175686,
+        "min_apparent_temp": 5.769148
+      },
+      {
+        "date_tz": "2024-04-13",
+        "max_apparent_temp": 7.1626415,
+        "min_apparent_temp": -5.229673
+      },
+      {
+        "date_tz": "2024-04-14",
+        "max_apparent_temp": 8.401644,
+        "min_apparent_temp": -5.3937893
+      },
+      {
+        "date_tz": "2024-04-15",
+        "max_apparent_temp": 9.311618,
+        "min_apparent_temp": 1.799212
+      },
+      {
+        "date_tz": "2024-04-16",
+        "max_apparent_temp": 7.3964195,
+        "min_apparent_temp": -1.8185372
+      },
+      {
+        "date_tz": "2024-04-17",
+        "max_apparent_temp": 6.409048,
+        "min_apparent_temp": -4.302577
+      },
+      {
+        "date_tz": "2024-04-18",
+        "max_apparent_temp": 6.3744774,
+        "min_apparent_temp": -1.1616051
+      },
+      {
+        "date_tz": "2024-04-19",
+        "max_apparent_temp": 8.303089,
+        "min_apparent_temp": 1.8107548
+      },
+      {
+        "date_tz": "2024-04-20",
+        "max_apparent_temp": 6.193825,
+        "min_apparent_temp": -0.34706664
+      },
+      {
+        "date_tz": "2024-04-21",
+        "max_apparent_temp": 2.1958437,
+        "min_apparent_temp": -3.0494576
+      },
+      {
+        "date_tz": "2024-04-22",
+        "max_apparent_temp": 2.9881034,
+        "min_apparent_temp": -7.1253057
+      },
+      {
+        "date_tz": "2024-04-23",
+        "max_apparent_temp": 13.865284,
+        "min_apparent_temp": -2.3941483
+      },
+      {
+        "date_tz": "2024-04-24",
+        "max_apparent_temp": 6.3168497,
+        "min_apparent_temp": -5.980221
+      },
+      {
+        "date_tz": "2024-04-25",
+        "max_apparent_temp": 4.3540764,
+        "min_apparent_temp": -8.38799
+      },
+      {
+        "date_tz": "2024-04-26",
+        "max_apparent_temp": 10.857437,
+        "min_apparent_temp": -6.404458
+      },
+      {
+        "date_tz": "2024-04-27",
+        "max_apparent_temp": 13.694843,
+        "min_apparent_temp": -1.34968
+      },
+      {
+        "date_tz": "2024-04-28",
+        "max_apparent_temp": 19.722221,
+        "min_apparent_temp": 4.7576714
+      },
+      {
+        "date_tz": "2024-04-29",
+        "max_apparent_temp": 9.472021,
+        "min_apparent_temp": 0.5837145
+      },
+      {
+        "date_tz": "2024-04-30",
+        "max_apparent_temp": 4.455061,
+        "min_apparent_temp": 0.5736141
+      },
+      {
+        "date_tz": "2024-05-01",
+        "max_apparent_temp": 13.538546,
+        "min_apparent_temp": -0.8344822
+      },
+      {
+        "date_tz": "2024-05-02",
+        "max_apparent_temp": 15.051474,
+        "min_apparent_temp": 5.834941
+      },
+      {
+        "date_tz": "2024-05-03",
+        "max_apparent_temp": 17.057987,
+        "min_apparent_temp": 2.9648376
+      },
+      {
+        "date_tz": "2024-05-04",
+        "max_apparent_temp": 18.127125,
+        "min_apparent_temp": 8.520073
+      },
+      {
+        "date_tz": "2024-05-05",
+        "max_apparent_temp": 10.876164,
+        "min_apparent_temp": 6.1620026
+      },
+      {
+        "date_tz": "2024-05-06",
+        "max_apparent_temp": 18.850874,
+        "min_apparent_temp": 8.620034
+      },
+      {
+        "date_tz": "2024-05-07",
+        "max_apparent_temp": 17.881294,
+        "min_apparent_temp": 3.8631525
+      },
+      {
+        "date_tz": "2024-05-08",
+        "max_apparent_temp": 9.464534,
+        "min_apparent_temp": 3.9299917
+      },
+      {
+        "date_tz": "2024-05-09",
+        "max_apparent_temp": 13.016375,
+        "min_apparent_temp": 3.9581337
+      },
+      {
+        "date_tz": "2024-05-10",
+        "max_apparent_temp": 14.337973,
+        "min_apparent_temp": 1.6860414
+      },
+      {
+        "date_tz": "2024-05-11",
+        "max_apparent_temp": 16.589827,
+        "min_apparent_temp": 1.2061405
+      },
+      {
+        "date_tz": "2024-05-12",
+        "max_apparent_temp": 15.087082,
+        "min_apparent_temp": 5.971504
+      },
+      {
+        "date_tz": "2024-05-13",
+        "max_apparent_temp": 16.336767,
+        "min_apparent_temp": 6.2776146
+      },
+      {
+        "date_tz": "2024-05-14",
+        "max_apparent_temp": 20.555525,
+        "min_apparent_temp": 10.4906225
+      },
+      {
+        "date_tz": "2024-05-15",
+        "max_apparent_temp": 21.687922,
+        "min_apparent_temp": 8.609308
+      },
+      {
+        "date_tz": "2024-05-16",
+        "max_apparent_temp": 23.52245,
+        "min_apparent_temp": 10.672766
+      },
+      {
+        "date_tz": "2024-05-17",
+        "max_apparent_temp": 24.27543,
+        "min_apparent_temp": 11.184676
+      },
+      {
+        "date_tz": "2024-05-18",
+        "max_apparent_temp": 22.446415,
+        "min_apparent_temp": 13.464355
+      },
+      {
+        "date_tz": "2024-05-19",
+        "max_apparent_temp": 24.123882,
+        "min_apparent_temp": 11.882114
+      },
+      {
+        "date_tz": "2024-05-20",
+        "max_apparent_temp": 28.560589,
+        "min_apparent_temp": 13.727314
+      },
+      {
+        "date_tz": "2024-05-21",
+        "max_apparent_temp": 28.259277,
+        "min_apparent_temp": 15.791985
+      },
+      {
+        "date_tz": "2024-05-22",
+        "max_apparent_temp": 31.54589,
+        "min_apparent_temp": 18.441751
+      },
+      {
+        "date_tz": "2024-05-23",
+        "max_apparent_temp": 22.756298,
+        "min_apparent_temp": 15.899515
+      },
+      {
+        "date_tz": "2024-05-24",
+        "max_apparent_temp": 15.468544,
+        "min_apparent_temp": 9.457249
+      },
+      {
+        "date_tz": "2024-05-25",
+        "max_apparent_temp": 19.032524,
+        "min_apparent_temp": 6.5061874
+      },
+      {
+        "date_tz": "2024-05-26",
+        "max_apparent_temp": 25.287003,
+        "min_apparent_temp": 13.822863
+      },
+      {
+        "date_tz": "2024-05-27",
+        "max_apparent_temp": 21.726347,
+        "min_apparent_temp": 14.992481
+      },
+      {
+        "date_tz": "2024-05-28",
+        "max_apparent_temp": 19.399271,
+        "min_apparent_temp": 12.765326
+      },
+      {
+        "date_tz": "2024-05-29",
+        "max_apparent_temp": 17.390697,
+        "min_apparent_temp": 8.903298
+      },
+      {
+        "date_tz": "2024-05-30",
+        "max_apparent_temp": 17.908201,
+        "min_apparent_temp": 6.112131
+      },
+      {
+        "date_tz": "2024-05-31",
+        "max_apparent_temp": 19.963789,
+        "min_apparent_temp": 6.394079
+      },
+      {
+        "date_tz": "2024-06-01",
+        "max_apparent_temp": 25.682,
+        "min_apparent_temp": 7.929249
+      },
+      {
+        "date_tz": "2024-06-02",
+        "max_apparent_temp": 25.311245,
+        "min_apparent_temp": 11.89938
+      },
+      {
+        "date_tz": "2024-06-03",
+        "max_apparent_temp": 30.121758,
+        "min_apparent_temp": 13.205353
+      },
+      {
+        "date_tz": "2024-06-04",
+        "max_apparent_temp": 31.698719,
+        "min_apparent_temp": 14.4170685
+      },
+      {
+        "date_tz": "2024-06-05",
+        "max_apparent_temp": 32.78969,
+        "min_apparent_temp": 17.247839
+      },
+      {
+        "date_tz": "2024-06-06",
+        "max_apparent_temp": 27.692526,
+        "min_apparent_temp": 17.80264
+      },
+      {
+        "date_tz": "2024-06-07",
+        "max_apparent_temp": 22.009277,
+        "min_apparent_temp": 14.91811
+      },
+      {
+        "date_tz": "2024-06-08",
+        "max_apparent_temp": 19.193428,
+        "min_apparent_temp": 12.585209
+      },
+      {
+        "date_tz": "2024-06-09",
+        "max_apparent_temp": 16.243134,
+        "min_apparent_temp": 11.820658
+      },
+      {
+        "date_tz": "2024-06-10",
+        "max_apparent_temp": 15.102819,
+        "min_apparent_temp": 10.608344
+      },
+      {
+        "date_tz": "2024-06-11",
+        "max_apparent_temp": 18.063835,
+        "min_apparent_temp": 10.291262
+      },
+      {
+        "date_tz": "2024-06-12",
+        "max_apparent_temp": 19.164457,
+        "min_apparent_temp": 12.106329
+      },
+      {
+        "date_tz": "2024-06-13",
+        "max_apparent_temp": 26.957333,
+        "min_apparent_temp": 12.897936
+      },
+      {
+        "date_tz": "2024-06-14",
+        "max_apparent_temp": 22.423996,
+        "min_apparent_temp": 13.573648
+      },
+      {
+        "date_tz": "2024-06-15",
+        "max_apparent_temp": 17.503843,
+        "min_apparent_temp": 8.940639
+      },
+      {
+        "date_tz": "2024-06-16",
+        "max_apparent_temp": 21.232569,
+        "min_apparent_temp": 7.716734
+      },
+      {
+        "date_tz": "2024-06-17",
+        "max_apparent_temp": 30.290642,
+        "min_apparent_temp": 14.577866
+      },
+      {
+        "date_tz": "2024-06-18",
+        "max_apparent_temp": 34.390198,
+        "min_apparent_temp": 22.3962
+      },
+      {
+        "date_tz": "2024-06-19",
+        "max_apparent_temp": 36.000923,
+        "min_apparent_temp": 26.190027
+      },
+      {
+        "date_tz": "2024-06-20",
+        "max_apparent_temp": 31.45111,
+        "min_apparent_temp": 23.706537
+      },
+      {
+        "date_tz": "2024-06-21",
+        "max_apparent_temp": 24.169985,
+        "min_apparent_temp": 17.317225
+      },
+      {
+        "date_tz": "2024-06-22",
+        "max_apparent_temp": 24.11918,
+        "min_apparent_temp": 18.248657
+      },
+      {
+        "date_tz": "2024-06-23",
+        "max_apparent_temp": 27.083818,
+        "min_apparent_temp": 16.481146
+      },
+      {
+        "date_tz": "2024-06-24",
+        "max_apparent_temp": 23.45319,
+        "min_apparent_temp": 12.707529
+      },
+      {
+        "date_tz": "2024-06-25",
+        "max_apparent_temp": 28.969212,
+        "min_apparent_temp": 14.795656
+      },
+      {
+        "date_tz": "2024-06-26",
+        "max_apparent_temp": 26.340467,
+        "min_apparent_temp": 18.309008
+      },
+      {
+        "date_tz": "2024-06-27",
+        "max_apparent_temp": 19.680798,
+        "min_apparent_temp": 9.878649
+      },
+      {
+        "date_tz": "2024-06-28",
+        "max_apparent_temp": 20.990257,
+        "min_apparent_temp": 7.646723
+      },
+      {
+        "date_tz": "2024-06-29",
+        "max_apparent_temp": 30.019955,
+        "min_apparent_temp": 1.1403475
+      },
+      {
+        "date_tz": "2024-06-30",
+        "max_apparent_temp": 30.28558,
+        "min_apparent_temp": 15.607859
+      },
+      {
+        "date_tz": "2024-07-01",
+        "max_apparent_temp": 27.462593,
+        "min_apparent_temp": 17.803492
+      },
+      {
+        "date_tz": "2024-07-02",
+        "max_apparent_temp": 26.089344,
+        "min_apparent_temp": 13.898718
+      },
+      {
+        "date_tz": "2024-07-03",
+        "max_apparent_temp": 21.432281,
+        "min_apparent_temp": 14.683834
+      },
+      {
+        "date_tz": "2024-07-04",
+        "max_apparent_temp": 26.60915,
+        "min_apparent_temp": 15.179268
+      },
+      {
+        "date_tz": "2024-07-05",
+        "max_apparent_temp": 28.589931,
+        "min_apparent_temp": 18.251198
+      },
+      {
+        "date_tz": "2024-07-06",
+        "max_apparent_temp": 29.157726,
+        "min_apparent_temp": 13.564957
+      },
+      {
+        "date_tz": "2024-07-07",
+        "max_apparent_temp": 22.995527,
+        "min_apparent_temp": 12.952406
+      },
+      {
+        "date_tz": "2024-07-08",
+        "max_apparent_temp": 24.875444,
+        "min_apparent_temp": 12.429922
+      },
+      {
+        "date_tz": "2024-07-09",
+        "max_apparent_temp": 23.237972,
+        "min_apparent_temp": 18.324177
+      },
+      {
+        "date_tz": "2024-07-10",
+        "max_apparent_temp": 30.46468,
+        "min_apparent_temp": 20.706911
+      },
+      {
+        "date_tz": "2024-07-11",
+        "max_apparent_temp": 30.159256,
+        "min_apparent_temp": 14.028763
+      },
+      {
+        "date_tz": "2024-07-12",
+        "max_apparent_temp": 29.15569,
+        "min_apparent_temp": 19.532536
+      },
+      {
+        "date_tz": "2024-07-13",
+        "max_apparent_temp": 28.122166,
+        "min_apparent_temp": 23.346407
+      },
+      {
+        "date_tz": "2024-07-14",
+        "max_apparent_temp": 29.124416,
+        "min_apparent_temp": 21.470934
+      },
+      {
+        "date_tz": "2024-07-15",
+        "max_apparent_temp": 32.68905,
+        "min_apparent_temp": 21.645422
+      },
+      {
+        "date_tz": "2024-07-16",
+        "max_apparent_temp": 30.34486,
+        "min_apparent_temp": 24.209866
+      },
+      {
+        "date_tz": "2024-07-17",
+        "max_apparent_temp": 27.017344,
+        "min_apparent_temp": 23.236118
+      },
+      {
+        "date_tz": "2024-07-18",
+        "max_apparent_temp": 23.230677,
+        "min_apparent_temp": 16.62546
+      },
+      {
+        "date_tz": "2024-07-19",
+        "max_apparent_temp": 22.899345,
+        "min_apparent_temp": 20.831432
+      },
+      {
+        "date_tz": "2024-07-31",
+        "max_apparent_temp": 28.028015,
+        "min_apparent_temp": 25.418638
+      },
+      {
+        "date_tz": "2024-08-02",
+        "max_apparent_temp": 27.459414,
+        "min_apparent_temp": 27.459414
+      },
+      {
+        "date_tz": "2024-08-07",
+        "max_apparent_temp": 23.3476,
+        "min_apparent_temp": 23.3476
+      },
+      {
+        "date_tz": "2024-08-09",
+        "max_apparent_temp": 20.961405,
+        "min_apparent_temp": 20.961405
+      },
+      {
+        "date_tz": "2024-08-10",
+        "max_apparent_temp": 18.040257,
+        "min_apparent_temp": 17.938963
+      },
+      {
+        "date_tz": "2024-08-11",
+        "max_apparent_temp": 16.518785,
+        "min_apparent_temp": 13.019045
+      },
+      {
+        "date_tz": "2024-08-14",
+        "max_apparent_temp": 30.574345,
+        "min_apparent_temp": 29.30701
+      },
+      {
+        "date_tz": "2024-08-15",
+        "max_apparent_temp": 28.043465,
+        "min_apparent_temp": 28.043465
+      },
+      {
+        "date_tz": "2024-08-17",
+        "max_apparent_temp": 27.026318,
+        "min_apparent_temp": 22.871058
+      },
+      {
+        "date_tz": "2024-08-18",
+        "max_apparent_temp": 26.212175,
+        "min_apparent_temp": 20.937008
+      },
+      {
+        "date_tz": "2024-08-19",
+        "max_apparent_temp": 22.89213,
+        "min_apparent_temp": 12.347208
+      },
+      {
+        "date_tz": "2024-08-20",
+        "max_apparent_temp": 16.53167,
+        "min_apparent_temp": 12.077366
+      },
+      {
+        "date_tz": "2024-08-21",
+        "max_apparent_temp": 13.829252,
+        "min_apparent_temp": 11.956377
+      },
+      {
+        "date_tz": "2024-08-22",
+        "max_apparent_temp": 19.598055,
+        "min_apparent_temp": 12.36656
+      },
+      {
+        "date_tz": "2024-08-23",
+        "max_apparent_temp": 26.964125,
+        "min_apparent_temp": 13.183945
+      },
+      {
+        "date_tz": "2024-08-24",
+        "max_apparent_temp": 30.589775,
+        "min_apparent_temp": 15.130014
+      },
+      {
+        "date_tz": "2024-08-25",
+        "max_apparent_temp": 31.75494,
+        "min_apparent_temp": 17.086203
+      },
+      {
+        "date_tz": "2024-08-26",
+        "max_apparent_temp": 31.629436,
+        "min_apparent_temp": 19.12231
+      },
+      {
+        "date_tz": "2024-08-27",
+        "max_apparent_temp": 29.160835,
+        "min_apparent_temp": 20.784771
+      },
+      {
+        "date_tz": "2024-08-28",
+        "max_apparent_temp": 24.039665,
+        "min_apparent_temp": 13.2722435
+      },
+      {
+        "date_tz": "2024-08-29",
+        "max_apparent_temp": 20.432032,
+        "min_apparent_temp": 9.661992
+      },
+      {
+        "date_tz": "2024-08-30",
+        "max_apparent_temp": 24.436314,
+        "min_apparent_temp": 11.013535
+      },
+      {
+        "date_tz": "2024-08-31",
+        "max_apparent_temp": 24.410446,
+        "min_apparent_temp": 15.874298
+      },
+      {
+        "date_tz": "2024-09-01",
+        "max_apparent_temp": 21.661074,
+        "min_apparent_temp": 10.714705
+      },
+      {
+        "date_tz": "2024-09-02",
+        "max_apparent_temp": 13.755672,
+        "min_apparent_temp": 7.518139
+      },
+      {
+        "date_tz": "2024-09-03",
+        "max_apparent_temp": 18.957253,
+        "min_apparent_temp": 8.062402
+      },
+      {
+        "date_tz": "2024-09-04",
+        "max_apparent_temp": 22.586164,
+        "min_apparent_temp": 13.155548
+      },
+      {
+        "date_tz": "2024-09-05",
+        "max_apparent_temp": 26.330456,
+        "min_apparent_temp": 14.146484
+      },
+      {
+        "date_tz": "2024-09-06",
+        "max_apparent_temp": 21.83686,
+        "min_apparent_temp": 14.178888
+      },
+      {
+        "date_tz": "2024-09-07",
+        "max_apparent_temp": 22.166868,
+        "min_apparent_temp": 11.133218
+      },
+      {
+        "date_tz": "2024-09-08",
+        "max_apparent_temp": 9.873446,
+        "min_apparent_temp": 4.6152124
+      },
+      {
+        "date_tz": "2024-09-09",
+        "max_apparent_temp": 17.197556,
+        "min_apparent_temp": 6.6548595
+      },
+      {
+        "date_tz": "2024-09-10",
+        "max_apparent_temp": 16.178253,
+        "min_apparent_temp": 5.953368
+      },
+      {
+        "date_tz": "2024-09-11",
+        "max_apparent_temp": 22.20406,
+        "min_apparent_temp": 10.849936
+      },
+      {
+        "date_tz": "2024-09-12",
+        "max_apparent_temp": 25.224426,
+        "min_apparent_temp": 13.039585
+      },
+      {
+        "date_tz": "2024-09-13",
+        "max_apparent_temp": 19.598143,
+        "min_apparent_temp": 19.128067
+      },
+      {
+        "date_tz": "2024-09-14",
+        "max_apparent_temp": 28.545338,
+        "min_apparent_temp": 16.093937
+      },
+      {
+        "date_tz": "2024-09-15",
+        "max_apparent_temp": 29.265694,
+        "min_apparent_temp": 15.66876
+      },
+      {
+        "date_tz": "2024-09-16",
+        "max_apparent_temp": 28.280815,
+        "min_apparent_temp": 17.23901
+      },
+      {
+        "date_tz": "2024-09-17",
+        "max_apparent_temp": 28.787815,
+        "min_apparent_temp": 18.011591
+      },
+      {
+        "date_tz": "2024-09-18",
+        "max_apparent_temp": 27.87439,
+        "min_apparent_temp": 17.07831
+      },
+      {
+        "date_tz": "2024-09-19",
+        "max_apparent_temp": 27.647144,
+        "min_apparent_temp": 15.177879
+      },
+      {
+        "date_tz": "2024-09-20",
+        "max_apparent_temp": 25.55915,
+        "min_apparent_temp": 14.334513
+      },
+      {
+        "date_tz": "2024-09-21",
+        "max_apparent_temp": 22.399765,
+        "min_apparent_temp": 14.284445
+      },
+      {
+        "date_tz": "2024-09-22",
+        "max_apparent_temp": 20.212154,
+        "min_apparent_temp": 11.449038
+      },
+      {
+        "date_tz": "2024-09-23",
+        "max_apparent_temp": 16.117783,
+        "min_apparent_temp": 12.470049
+      },
+      {
+        "date_tz": "2024-09-24",
+        "max_apparent_temp": 18.307463,
+        "min_apparent_temp": 11.635063
+      },
+      {
+        "date_tz": "2024-09-25",
+        "max_apparent_temp": 14.346359,
+        "min_apparent_temp": 9.903292
+      },
+      {
+        "date_tz": "2024-09-26",
+        "max_apparent_temp": 19.734285,
+        "min_apparent_temp": 10.952127
+      },
+      {
+        "date_tz": "2024-09-27",
+        "max_apparent_temp": 19.307617,
+        "min_apparent_temp": 11.5871105
+      },
+      {
+        "date_tz": "2024-09-28",
+        "max_apparent_temp": 17.67062,
+        "min_apparent_temp": 10.971529
+      },
+      {
+        "date_tz": "2024-09-29",
+        "max_apparent_temp": 21.624306,
+        "min_apparent_temp": 12.858051
+      },
+      {
+        "date_tz": "2024-09-30",
+        "max_apparent_temp": 18.648378,
+        "min_apparent_temp": 11.273741
+      },
+      {
+        "date_tz": "2024-10-03",
+        "max_apparent_temp": 17.605255,
+        "min_apparent_temp": 13.411812
+      },
+      {
+        "date_tz": "2024-10-04",
+        "max_apparent_temp": 20.888872,
+        "min_apparent_temp": 13.519136
+      },
+      {
+        "date_tz": "2024-10-05",
+        "max_apparent_temp": 16.528185,
+        "min_apparent_temp": 7.1789293
+      },
+      {
+        "date_tz": "2024-10-06",
+        "max_apparent_temp": 14.843018,
+        "min_apparent_temp": 5.5042353
+      },
+      {
+        "date_tz": "2024-10-07",
+        "max_apparent_temp": 13.716808,
+        "min_apparent_temp": 6.3477077
+      },
+      {
+        "date_tz": "2024-10-08",
+        "max_apparent_temp": 10.861753,
+        "min_apparent_temp": 3.0922613
+      },
+      {
+        "date_tz": "2024-10-09",
+        "max_apparent_temp": 8.6303835,
+        "min_apparent_temp": 4.476163
+      },
+      {
+        "date_tz": "2024-10-10",
+        "max_apparent_temp": 7.4635696,
+        "min_apparent_temp": 2.4559684
+      },
+      {
+        "date_tz": "2024-10-11",
+        "max_apparent_temp": 11.506591,
+        "min_apparent_temp": 3.7895622
+      },
+      {
+        "date_tz": "2024-10-12",
+        "max_apparent_temp": 10.771325,
+        "min_apparent_temp": 2.4082618
+      },
+      {
+        "date_tz": "2024-10-13",
+        "max_apparent_temp": 7.23112,
+        "min_apparent_temp": -0.4283371
+      },
+      {
+        "date_tz": "2024-10-14",
+        "max_apparent_temp": 4.874193,
+        "min_apparent_temp": -1.1049705
+      },
+      {
+        "date_tz": "2024-10-15",
+        "max_apparent_temp": 4.3039217,
+        "min_apparent_temp": -0.23015118
+      },
+      {
+        "date_tz": "2024-10-16",
+        "max_apparent_temp": 5.863021,
+        "min_apparent_temp": 0.60143757
+      },
+      {
+        "date_tz": "2024-10-17",
+        "max_apparent_temp": 8.244064,
+        "min_apparent_temp": -1.97892
+      },
+      {
+        "date_tz": "2024-10-18",
+        "max_apparent_temp": 12.028191,
+        "min_apparent_temp": -0.10540295
+      },
+      {
+        "date_tz": "2024-10-19",
+        "max_apparent_temp": 4.9956064,
+        "min_apparent_temp": 3.531839
+      },
+      {
+        "date_tz": "2024-10-26",
+        "max_apparent_temp": 1.1523976,
+        "min_apparent_temp": -4.91314
+      },
+      {
+        "date_tz": "2024-10-27",
+        "max_apparent_temp": 1.1400824,
+        "min_apparent_temp": -5.6701255
+      },
+      {
+        "date_tz": "2024-10-28",
+        "max_apparent_temp": 1.3792601,
+        "min_apparent_temp": -7.322591
+      },
+      {
+        "date_tz": "2024-10-29",
+        "max_apparent_temp": 7.346508,
+        "min_apparent_temp": -4.841599
+      },
+      {
+        "date_tz": "2024-10-30",
+        "max_apparent_temp": 20.811722,
+        "min_apparent_temp": 5.655447
+      },
+      {
+        "date_tz": "2024-10-31",
+        "max_apparent_temp": 20.451775,
+        "min_apparent_temp": 12.878674
+      },
+      {
+        "date_tz": "2024-11-01",
+        "max_apparent_temp": 16.28194,
+        "min_apparent_temp": 0.6702299
+      },
+      {
+        "date_tz": "2024-11-02",
+        "max_apparent_temp": 1.0439243,
+        "min_apparent_temp": -3.2668633
+      },
+      {
+        "date_tz": "2024-11-03",
+        "max_apparent_temp": 1.6263103,
+        "min_apparent_temp": -5.7720175
+      },
+      {
+        "date_tz": "2024-11-04",
+        "max_apparent_temp": 3.981865,
+        "min_apparent_temp": -2.4211707
+      },
+      {
+        "date_tz": "2024-11-05",
+        "max_apparent_temp": 18.767637,
+        "min_apparent_temp": 4.1567383
+      },
+      {
+        "date_tz": "2024-11-06",
+        "max_apparent_temp": 17.695782,
+        "min_apparent_temp": 9.681901
+      },
+      {
+        "date_tz": "2024-11-07",
+        "max_apparent_temp": 6.765007,
+        "min_apparent_temp": 2.5650163
+      },
+      {
+        "date_tz": "2024-11-08",
+        "max_apparent_temp": 5.4013195,
+        "min_apparent_temp": -0.68654704
+      },
+      {
+        "date_tz": "2024-11-09",
+        "max_apparent_temp": 4.6779385,
+        "min_apparent_temp": -3.0825102
+      },
+      {
+        "date_tz": "2024-11-10",
+        "max_apparent_temp": 8.460772,
+        "min_apparent_temp": 2.8979797
+      },
+      {
+        "date_tz": "2024-11-11",
+        "max_apparent_temp": 8.5735855,
+        "min_apparent_temp": 2.8875484
+      },
+      {
+        "date_tz": "2024-11-12",
+        "max_apparent_temp": 1.5372648,
+        "min_apparent_temp": -3.4145555
+      },
+      {
+        "date_tz": "2024-11-13",
+        "max_apparent_temp": -1.800282,
+        "min_apparent_temp": -6.4151316
+      },
+      {
+        "date_tz": "2024-11-14",
+        "max_apparent_temp": -0.43947268,
+        "min_apparent_temp": -7.163518
+      },
+      {
+        "date_tz": "2024-11-15",
+        "max_apparent_temp": 2.7249079,
+        "min_apparent_temp": -5.2784038
+      },
+      {
+        "date_tz": "2024-11-16",
+        "max_apparent_temp": 6.197796,
+        "min_apparent_temp": -2.4946895
+      },
+      {
+        "date_tz": "2024-11-17",
+        "max_apparent_temp": 3.0366874,
+        "min_apparent_temp": -2.8250515
+      },
+      {
+        "date_tz": "2024-11-18",
+        "max_apparent_temp": 7.020628,
+        "min_apparent_temp": 1.0254526
+      },
+      {
+        "date_tz": "2024-11-19",
+        "max_apparent_temp": 8.226848,
+        "min_apparent_temp": 0.26019382
+      },
+      {
+        "date_tz": "2024-11-20",
+        "max_apparent_temp": 1.6264238,
+        "min_apparent_temp": -0.2986288
+      },
+      {
+        "date_tz": "2024-11-21",
+        "max_apparent_temp": 3.4969025,
+        "min_apparent_temp": 1.2569156
+      },
+      {
+        "date_tz": "2024-11-28",
+        "max_apparent_temp": -1.611301,
+        "min_apparent_temp": -3.7150538
+      },
+      {
+        "date_tz": "2024-11-29",
+        "max_apparent_temp": -2.478119,
+        "min_apparent_temp": -4.6220202
+      },
+      {
+        "date_tz": "2024-12-03",
+        "max_apparent_temp": -6.1575437,
+        "min_apparent_temp": -7.1261578
+      },
+      {
+        "date_tz": "2024-12-05",
+        "max_apparent_temp": -6.4154487,
+        "min_apparent_temp": -8.322976
+      },
+      {
+        "date_tz": "2024-12-06",
+        "max_apparent_temp": -10.447712,
+        "min_apparent_temp": -17.36441
+      },
+      {
+        "date_tz": "2024-12-07",
+        "max_apparent_temp": -11.687395,
+        "min_apparent_temp": -17.380302
+      },
+      {
+        "date_tz": "2024-12-08",
+        "max_apparent_temp": -1.7530587,
+        "min_apparent_temp": -15.414433
+      },
+      {
+        "date_tz": "2024-12-09",
+        "max_apparent_temp": -7.277928,
+        "min_apparent_temp": -14.050678
+      },
+      {
+        "date_tz": "2024-12-10",
+        "max_apparent_temp": -1.2112684,
+        "min_apparent_temp": -6.4666634
+      },
+      {
+        "date_tz": "2024-12-11",
+        "max_apparent_temp": 1.0495582,
+        "min_apparent_temp": -4.007463
+      },
+      {
+        "date_tz": "2024-12-12",
+        "max_apparent_temp": -4.672282,
+        "min_apparent_temp": -10.550659
+      },
+      {
+        "date_tz": "2024-12-14",
+        "max_apparent_temp": -14.104466,
+        "min_apparent_temp": -16.197329
+      },
+      {
+        "date_tz": "2024-12-15",
+        "max_apparent_temp": -11.221929,
+        "min_apparent_temp": -20.601282
+      },
+      {
+        "date_tz": "2024-12-17",
+        "max_apparent_temp": 0.96412325,
+        "min_apparent_temp": -1.8318005
+      },
+      {
+        "date_tz": "2024-12-18",
+        "max_apparent_temp": -0.34105825,
+        "min_apparent_temp": -4.227602
+      },
+      {
+        "date_tz": "2024-12-19",
+        "max_apparent_temp": -3.4064493,
+        "min_apparent_temp": -15.453347
+      },
+      {
+        "date_tz": "2024-12-20",
+        "max_apparent_temp": -12.457836,
+        "min_apparent_temp": -16.42373
+      },
+      {
+        "date_tz": "2024-12-21",
+        "max_apparent_temp": -13.743258,
+        "min_apparent_temp": -20.910593
+      },
+      {
+        "date_tz": "2024-12-22",
+        "max_apparent_temp": -16.334095,
+        "min_apparent_temp": -23.75171
+      },
+      {
+        "date_tz": "2024-12-23",
+        "max_apparent_temp": -11.799093,
+        "min_apparent_temp": -20.076672
+      },
+      {
+        "date_tz": "2024-12-24",
+        "max_apparent_temp": -9.5933075,
+        "min_apparent_temp": -19.438139
+      },
+      {
+        "date_tz": "2024-12-25",
+        "max_apparent_temp": -16.144041,
+        "min_apparent_temp": -26.50453
+      },
+      {
+        "date_tz": "2024-12-26",
+        "max_apparent_temp": -10.745062,
+        "min_apparent_temp": -23.578188
+      },
+      {
+        "date_tz": "2024-12-27",
+        "max_apparent_temp": -14.811851,
+        "min_apparent_temp": -16.341984
+      }
+    ]
+  },
+  "encoding": {
+    "x": { "type": "temporal", "field": "date_tz", "title": "" },
+    "tooltip": [
+      { "type": "temporal", "field": "date_tz" },
+      { "field": "max_apparent_temp", "type": "quantitative" },
+      { "field": "min_apparent_temp", "type": "quantitative" }
+    ]
+  },
+  "layer": [
+    {
+      "mark": { "type": "line", "color": "#ec6868" },
+      "encoding": {
+        "y": {
+          "field": "max_apparent_temp",
+          "type": "quantitative",
+          "title": "Max Temperature"
+        }
+      }
+    },
+    {
+      "mark": { "type": "line", "color": "#5ba0e0" },
+      "encoding": {
+        "y": {
+          "field": "min_apparent_temp",
+          "type": "quantitative",
+          "title": "Min Temperature"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "params": [
+        {
+          "name": "hover",
+          "select": { "type": "point", "on": "pointerover", "nearest": true }
+        }
+      ],
+      "encoding": {
+        "color": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": "black"
+          },
+          "value": "transparent"
+        }
+      }
+    }
+  ],
+  "config": {
+    "text": {
+      "color": "rgb(224, 224, 224)",
+      "font": "monospace",
+      "lineHeight": 1.6,
+      "fontSize": 12
+    },
+    "axis": {
+      "labelColor": "rgb(224, 224, 224)",
+      "gridColor": "rgb(100, 100, 100)",
+      "titleColor": "rgb(224, 224, 224)",
+      "tickColor": "rgb(224, 224, 224)",
+      "domainColor": "rgb(224, 224, 224)",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "title": { "color": "rgb(224, 224, 224)" }
+  },
+  "background": null,
+  "width": "container"
+}

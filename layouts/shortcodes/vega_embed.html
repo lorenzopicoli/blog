@@ -1,0 +1,10 @@
+{{ $page := $.Page.RelPermalink }}
+<div class="chart-wrapper">
+  <div class="chart" id='{{ .Get "id" }}'></div>
+</div>
+<script type="text/javascript">
+  var spec = '{{ $page }}/{{ .Get "spec" }}'
+  vegaEmbed('#{{ .Get "id" }}', spec, { renderer: 'svg' })
+    .then(function (result) {})
+    .catch(console.error)
+</script>

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Monthly Music Listening Patterns (2024)",
+    "fontSize": 16,
+    "anchor": "middle"
+  },
+  "width": "container",
+  "height": 400,
+  "background": null,
+  "data": {
+    "values": [
+      { "month": "Jan", "count": 724, "differents": 442, "monthNum": 1 },
+      { "month": "Feb", "count": 460, "differents": 260, "monthNum": 2 },
+      { "month": "Mar", "count": 1414, "differents": 612, "monthNum": 3 },
+      { "month": "Apr", "count": 1287, "differents": 669, "monthNum": 4 },
+      { "month": "May", "count": 1068, "differents": 592, "monthNum": 5 },
+      { "month": "Jun", "count": 776, "differents": 445, "monthNum": 6 },
+      { "month": "Jul", "count": 407, "differents": 239, "monthNum": 7 },
+      { "month": "Aug", "count": 444, "differents": 279, "monthNum": 8 },
+      { "month": "Sep", "count": 582, "differents": 320, "monthNum": 9 },
+      { "month": "Oct", "count": 496, "differents": 306, "monthNum": 10 },
+      { "month": "Nov", "count": 553, "differents": 328, "monthNum": 11 },
+      { "month": "Dec", "count": 506, "differents": 376, "monthNum": 12 }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "month",
+      "type": "nominal",
+      "sort": { "field": "monthNum" },
+      "axis": { "labelAngle": 0, "title": "Month" }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar"
+      },
+      "encoding": {
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "Total Plays",
+          "axis": { "grid": false }
+        },
+        "color": {
+          "value": "#8B5CF6"
+        },
+        "tooltip": [
+          { "field": "month", "type": "nominal", "title": "Month" },
+          { "field": "count", "type": "quantitative", "title": "Total Plays" },
+          {
+            "field": "differents",
+            "type": "quantitative",
+            "title": "Unique Songs"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "differents",
+          "type": "quantitative",
+          "title": "Unique Songs",
+          "axis": { "grid": false }
+        },
+        "color": {
+          "value": "#EF4444"
+        }
+      }
+    }
+  ],
+  "config": {
+    "text": {
+      "color": "rgb(224, 224, 224)",
+      "font": "monospace",
+      "lineHeight": 1.6,
+      "fontSize": 12
+    },
+    "axis": {
+      "labelColor": "rgb(224, 224, 224)",
+      "titleColor": "rgb(224, 224, 224)",
+      "tickColor": "rgb(224, 224, 224)",
+      "domainColor": "rgb(224, 224, 224)",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "title": { "color": "rgb(224, 224, 224)" }
+  }
+}

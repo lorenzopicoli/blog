@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "height": 500,
+  "width": 300,
+  "signals": [
+    {
+      "name": "tx",
+      "update": "width / 2"
+    },
+    {
+      "name": "ty",
+      "update": "height / 2"
+    }
+  ],
+  "projections": [
+    {
+      "name": "projection",
+      "type": "equirectangular",
+      "scale": { "signal": "150" },
+      "rotate": [{ "signal": "0" }, { "signal": "0" }, 0],
+      "translate": [{ "signal": "tx" }, { "signal": "ty" }]
+    }
+  ],
+  "data": [
+    {
+      "name": "visited_countries",
+      "format": { "type": "csv" },
+      "values": "country_id,is_visited,color\n76,1,#2ecc71\n124,1,#e74c3c\n620,1,#f1c40f\n250,1,#9b59b6\n840,1,#3498db",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.is_visited == 1"
+        }
+      ]
+    },
+    {
+      "name": "world",
+      "url": "https://raw.githubusercontent.com/vega/vega/main/packages/vega-loader/test/data/world-110m.json",
+      "format": { "type": "topojson", "feature": "countries" },
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "visited_countries",
+          "key": "country_id",
+          "fields": ["id"],
+          "as": ["visited"],
+          "default": { "is_visited": 0, "color": "#f0f0f0" }
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "shape",
+      "from": { "data": "world" },
+      "encode": {
+        "enter": {
+          "strokeWidth": { "value": 0.5 },
+          "stroke": { "value": "#666" }
+        },
+        "update": {
+          "fill": {
+            "signal": "datum.visited && datum.visited.is_visited == 1 ? datum.visited.color : '#f0f0f0'"
+          }
+        }
+      },
+      "transform": [{ "type": "geoshape", "projection": "projection" }]
+    }
+  ],
+  "config": {
+    "text": {
+      "color": "rgb(224, 224, 224)",
+      "font": "monospace",
+      "lineHeight": 1.6,
+      "fontSize": 12
+    },
+    "axis": {
+      "labelColor": "rgb(224, 224, 224)",
+      "titleColor": "rgb(224, 224, 224)",
+      "tickColor": "rgb(224, 224, 224)",
+      "domainColor": "rgb(224, 224, 224)",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "title": { "color": "rgb(224, 224, 224)" }
+  }
+}

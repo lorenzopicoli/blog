@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart that sorts the y-values by the x-values.",
+  "data": {
+    "values": "display_name,number_of_visits\nGrocery Store,6.0\nCottage,7.0\nAirbnb In Brazil,13.0\nBouldering Gym,21.0\nGirlfriend's parents' house,24.0\nOffice,30.0\nAnother Subway Station,86.0\nHome,137.0\nSubway Station,164.0",
+    "format": { "type": "csv" }
+  },
+  "width": "container",
+  "height": 200,
+  "background": null,
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "display_name",
+          "title": "Place of interest",
+          "type": "ordinal",
+          "sort": "-x",
+          "axis": {
+            "ticks": false,
+            "labelPadding": 10,
+            "title": null,
+            "domain": false
+          }
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "number_of_visits",
+          "title": "Number Of Visits",
+          "axis": {
+            "grid": false,
+            "ticks": false,
+            "labels": false
+          }
+        },
+        "color": {
+          "value": "#5e409d"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5
+      },
+      "encoding": {
+        "y": {
+          "field": "display_name",
+          "type": "ordinal",
+          "sort": "-x"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "number_of_visits"
+        },
+        "text": {
+          "field": "number_of_visits",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "text": {
+      "color": "rgb(224, 224, 224)",
+      "font": "monospace",
+      "lineHeight": 1.6,
+      "fontSize": 12
+    },
+    "axis": {
+      "labelColor": "rgb(224, 224, 224)",
+      "titleColor": "rgb(224, 224, 224)",
+      "tickColor": "rgb(224, 224, 224)",
+      "domainColor": "rgb(224, 224, 224)",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "title": { "color": "rgb(224, 224, 224)" }
+  }
+}

@@ -4,6 +4,8 @@
   --meta-color: #666;
   --link-color: rgb(139, 126, 200);
   --hover-color: rgb(94, 64, 157);
+
+  --max-width: 850px;
 }
 
 body {
@@ -18,7 +20,7 @@ body {
 }
 
 .container {
-  max-width: 650px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 3rem 1rem;
 }
@@ -225,4 +227,45 @@ footer svg {
 
 .lb-outerContainer {
   background-color: var(--bg-color) !important;
+}
+
+/* TABLE */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: #8e8e8e;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.chart {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.chart-wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
