@@ -21,6 +21,16 @@
       { "bin": "93-100", "count": 95 }
     ]
   },
+  "params": [
+    {
+      "name": "hover",
+      "select": {
+        "type": "point",
+        "on": "mouseover",
+        "nearest": true
+      }
+    }
+  ],
   "mark": {
     "type": "bar",
     "tooltip": true,

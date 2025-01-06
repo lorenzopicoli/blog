@@ -3,18 +3,10 @@
   "description": "",
 
   "signals": [
-    {
-      "name": "step",
-      "update": "width / 53"
-    },
-    {
-      "name": "offset",
-      "update": "step / 3"
-    },
-    {
-      "name": "height",
-      "update": "step * 7"
-    },
+    { "name": "step", "value": 16 },
+    { "name": "offset", "value": 15 },
+    { "name": "width", "update": "step * 52 + offset * 11" },
+    { "name": "height", "update": "step * 5" },
     {
       "name": "scheme",
       "value": "purples"
@@ -388,7 +380,7 @@
       "name": "y",
       "type": "band",
       "domain": { "data": "data", "field": "d0", "sort": true },
-      "range": [0, { "signal": "height" }]
+      "range": { "step": { "signal": "step" } }
     },
     {
       "name": "color",
@@ -459,7 +451,7 @@
           "name": "x",
           "type": "band",
           "domain": { "data": "weeks", "field": "w0", "sort": true },
-          "range": [0, { "signal": "width" }]
+          "range": { "step": { "signal": "step" } }
         }
       ],
 
@@ -551,7 +543,5 @@
       }
     },
     "title": { "color": "rgb(224, 224, 224)" }
-  },
-  "width": "container",
-  "height": 300
+  }
 }

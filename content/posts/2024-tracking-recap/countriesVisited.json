@@ -1,8 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "height": 500,
-  "width": 300,
   "signals": [
+    {
+      "name": "width",
+      "init": "isFinite(containerSize()[0]) ? containerSize()[0] : 300"
+    },
     {
       "name": "tx",
       "update": "width / 2"
