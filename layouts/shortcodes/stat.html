@@ -1,0 +1,11 @@
+{{ $title := .Get "title" }} {{ $value := .Get "value" }} {{ $description :=
+.Get "description" }} {{ $icon := .Get "icon" | default "📊" }}
+
+<div class="stat-box">
+  <div class="stat-icon">{{ $icon }}</div>
+  <h3 class="stat-title">{{ $title }}</h3>
+  <div class="stat-value">{{ $value }}</div>
+  {{ with $description }}
+  <p class="stat-description">{{ . }}</p>
+  {{ end }}
+</div>

@@ -46,7 +46,7 @@
           "key": "country_id",
           "fields": ["id"],
           "as": ["visited"],
-          "default": { "is_visited": 0, "color": "#f0f0f0" }
+          "default": { "is_visited": 0, "color": "#1a1b1d" }
         }
       ]
     }
@@ -62,7 +62,7 @@
         },
         "update": {
           "fill": {
-            "signal": "datum.visited && datum.visited.is_visited == 1 ? datum.visited.color : '#2A2A2A'"
+            "signal": "datum.visited && datum.visited.is_visited == 1 ? datum.visited.color : '#1a1b1d'"
           }
         }
       },

@@ -7,7 +7,20 @@ draft = false
 
 {{< table_of_contents >}}
 
-Bla bla bal
+{{< stat_grid >}}
+{{< stat title="Bla" value="127 songs" description="June 8th, 2024 was my peak listening day" icon="🎵" >}}
+{{< stat title="Time in Brazil" value="40 days" description="My longest international stay in 2024" icon="✈️" >}}
+{{< stat title="Bouldering Sessions" value="21 times" description="19 hours of struggling with V3s" icon="🧗" >}}
+{{< /stat_grid >}}
+
+{{< stat_section title="Music Highlights" icon="🎵" >}}
+
+- Listened to 127 songs on June 8th
+- Top artist: Vulfpeck (21.26% of listening time)
+- 1854 Vulfpeck songs played
+  {{< /stat_section >}}
+
+  Bla bla bal
 
 I decided that I wanted to start tracking every aspect of my life that I could. Inspired by some of the best: [Nicholas Felton and his yearly reports](http://feltron.com/) and by [Felix and howisfelixtoday](https://howisfelix.today) I set myself a goal that by 2025 I would have a dashboard to look and visualize my year. Well I didn't manage to get that dashboard up and running, it's still a [work in progress](https://lorenzomodolo.com/projects/lomnia), but I did accomplish to track a lot of data that I'm excited to share.
 

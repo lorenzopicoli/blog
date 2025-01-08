@@ -1,0 +1,20 @@
+{{ with .Get "icon" }}
+<div class="stat-section">
+  <div class="stat-section-header">
+    <span class="stat-icon">{{ . }}</span>
+    {{ with $.Get "title" }}
+    <h3>{{ . }}</h3>
+    {{ end }}
+  </div>
+  <div class="stat-section-content">{{ $.Inner }}</div>
+</div>
+{{ else }}
+<div class="stat-section">
+  <div class="stat-section-header">
+    {{ with $.Get "title" }}
+    <h3>{{ . }}</h3>
+    {{ end }}
+  </div>
+  <div class="stat-section-content">{{ $.Inner }}</div>
+</div>
+{{ end }}
