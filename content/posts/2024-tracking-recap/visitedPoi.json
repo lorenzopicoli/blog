@@ -35,7 +35,7 @@
           }
         },
         "color": {
-          "value": "#5e409d"
+          "value": "#6E70EF"
         }
       }
     },
@@ -83,6 +83,15 @@
         "stroke": "transparent"
       }
     },
-    "title": { "color": "rgb(224, 224, 224)" }
+    "title": { "color": "rgb(224, 224, 224)" },
+    "background": null
+  },
+  "title": {
+    "text": "Visits to Places of Interest in 2024",
+    "fontSize": 16,
+    "offset": 20,
+    "subtitle": "Source: Lomnia - Owntracks",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10
   }
 }

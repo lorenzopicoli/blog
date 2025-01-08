@@ -1,6 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Distribution of sleep scores in 2023",
+  "title": {
+    "text": "Distribution of Sleep Score (2023)",
+    "subtitle": "Source: Lomnia - Obsidian/Watch",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10,
+    "fontSize": 16,
+    "offset": 20
+  },
   "height": 300,
   "data": {
     "values": [
@@ -34,7 +41,7 @@
   "mark": {
     "type": "bar",
     "tooltip": true,
-    "color": "#004857"
+    "color": "#fc97af"
   },
   "encoding": {
     "x": {

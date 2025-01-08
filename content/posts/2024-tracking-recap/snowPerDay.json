@@ -293,7 +293,13 @@
       { "date": "2024-12-27T00:00:00", "snowfall_cm": 0 }
     ]
   },
-  "transform": [{ "filter": "datum.snowfall_cm > 0" }],
+  "transform": [
+    { "filter": "datum.snowfall_cm > 0" },
+    {
+      "calculate": "datum.snowfall_cm / (snowUnit === 'Inches (in)' ? 2.54 : 1)",
+      "as": "converted_snow"
+    }
+  ],
   "params": [
     {
       "name": "hover",
@@ -301,6 +307,16 @@
         "type": "point",
         "on": "mouseover",
         "nearest": true
+      }
+    },
+    {
+      "name": "snowUnit",
+      "value": "cm",
+      "bind": {
+        "name": "Unit",
+        "input": "select",
+        "options": ["Centimeter (cm)", "Inches (in)"],
+        "labels": ["Centimeter (cm)", "Inches (in)"]
       }
     }
   ],
@@ -312,7 +328,7 @@
       "field": "date",
       "type": "ordinal",
       "timeUnit": "month",
-      "title": "Month"
+      "title": null
     },
     "x": {
       "field": "date",
@@ -321,9 +337,17 @@
       "title": "Day"
     },
     "size": {
-      "field": "snowfall_cm",
+      "field": "converted_snow",
       "type": "quantitative",
-      "aggregate": "sum"
+      "aggregate": "sum",
+      "legend": {
+        "title": "Amount of Snow",
+        "direction": "horizontal",
+        "orient": "bottom"
+      }
+    },
+    "color": {
+      "value": "#45AAF2"
     },
     "stroke": {
       "condition": { "param": "hover", "value": "white" },
@@ -335,7 +359,7 @@
     },
     "tooltip": [
       { "type": "temporal", "field": "date" },
-      { "field": "snowfall_cm", "type": "quantitative" }
+      { "field": "converted_snow", "type": "quantitative" }
     ]
   },
   "config": {
@@ -371,6 +395,14 @@
       }
     },
     "title": { "color": "rgb(224, 224, 224)" }
+  },
+  "title": {
+    "text": "Amount of Snow Experienced",
+    "subtitle": "Source: Lomnia - OpenMeteo",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10,
+    "fontSize": 16,
+    "offset": 20
   },
   "background": null,
   "width": "container"

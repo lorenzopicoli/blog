@@ -1,5 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "params": [
+    {
+      "name": "tempUnit",
+      "value": "Celsius",
+      "bind": {
+        "name": "Unit",
+        "input": "select",
+        "options": ["Celsius", "Fahrenheit"],
+        "labels": ["°C", "°F"]
+      }
+    }
+  ],
   "data": {
     "format": { "type": "json" },
     "values": [
@@ -1440,32 +1452,68 @@
       }
     ]
   },
+  "transform": [
+    {
+      "calculate": "datum.max_apparent_temp * (tempUnit === 'Fahrenheit' ? 9/5 : 1) + (tempUnit === 'Fahrenheit' ? 32 : 0)",
+      "as": "converted_max_temp"
+    },
+    {
+      "calculate": "datum.min_apparent_temp * (tempUnit === 'Fahrenheit' ? 9/5 : 1) + (tempUnit === 'Fahrenheit' ? 32 : 0)",
+      "as": "converted_min_temp"
+    }
+  ],
   "encoding": {
-    "x": { "type": "temporal", "field": "date_tz", "title": "" },
+    "x": { "type": "temporal", "field": "date_tz", "title": null },
     "tooltip": [
-      { "type": "temporal", "field": "date_tz" },
-      { "field": "max_apparent_temp", "type": "quantitative" },
-      { "field": "min_apparent_temp", "type": "quantitative" }
+      { "type": "temporal", "field": "date_tz", "title": "Date" },
+      {
+        "field": "converted_max_temp",
+        "type": "quantitative",
+        "title": "Max Temp"
+      },
+      {
+        "field": "converted_min_temp",
+        "type": "quantitative",
+        "title": "Min Temp"
+      }
     ]
   },
   "layer": [
     {
-      "mark": { "type": "line", "color": "#ec6868" },
+      "mark": { "type": "line" },
       "encoding": {
         "y": {
-          "field": "max_apparent_temp",
+          "field": "converted_max_temp",
           "type": "quantitative",
-          "title": "Max Temperature"
+          "title": null
+        },
+        "color": {
+          "datum": "Maximum",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Maximum", "Minimum"],
+            "range": ["#943126", "#45AAF2"]
+          },
+          "legend": {
+            "title": "Apparent Temperature",
+            "labelColor": "rgb(224, 224, 224)",
+            "titleColor": "rgb(224, 224, 224)",
+            "symbolStrokeColor": "rgb(224, 224, 224)"
+          }
         }
       }
     },
     {
-      "mark": { "type": "line", "color": "#5ba0e0" },
+      "mark": { "type": "line" },
       "encoding": {
         "y": {
-          "field": "min_apparent_temp",
+          "field": "converted_min_temp",
           "type": "quantitative",
-          "title": "Min Temperature"
+          "title": "Temperature"
+        },
+        "color": {
+          "datum": "Minimum",
+          "type": "nominal"
         }
       }
     },
@@ -1482,7 +1530,7 @@
           "condition": {
             "param": "hover",
             "empty": false,
-            "value": "black"
+            "value": "rgb(224, 224, 224)"
           },
           "value": "transparent"
         }
@@ -1505,12 +1553,29 @@
       "labelFontSize": 12,
       "titleFontSize": 12
     },
+    "legend": {
+      "labelColor": "rgb(224, 224, 224)",
+      "titleColor": "rgb(224, 224, 224)",
+      "symbolStrokeColor": "rgb(224, 224, 224)",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "labelFontSize": 14,
+      "titleFontSize": 14
+    },
     "style": {
       "cell": {
         "stroke": "transparent"
       }
     },
     "title": { "color": "rgb(224, 224, 224)" }
+  },
+  "title": {
+    "text": "Daily Average Temperatures",
+    "subtitle": "Source: Lomnia - OpenMeteo",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10,
+    "fontSize": 16,
+    "offset": 20
   },
   "background": null,
   "width": "container"

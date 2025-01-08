@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 400,
+  "height": 300,
   "background": null,
   "data": {
     "values": [
@@ -63,7 +63,7 @@
     {
       "mark": {
         "type": "bar",
-        "color": "#9b8420"
+        "color": "#2EAF7D"
       },
       "encoding": {
         "y": {
@@ -108,5 +108,13 @@
       }
     },
     "title": { "color": "rgb(224, 224, 224)" }
+  },
+  "title": {
+    "text": "Listening Distribution Per Hour of Day",
+    "offset": 20,
+    "fontSize": 16,
+    "subtitle": "Source: YourSpotify",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10
   }
 }

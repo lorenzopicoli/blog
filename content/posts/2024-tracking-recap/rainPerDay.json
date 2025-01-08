@@ -293,7 +293,13 @@
       { "date": "2024-12-27T00:00:00", "rain_mm": 0 }
     ]
   },
-  "transform": [{ "filter": "datum.rain_mm > 0" }],
+  "transform": [
+    { "filter": "datum.rain_mm > 0" },
+    {
+      "calculate": "datum.rain_mm / (rainUnit === 'Inches (in)' ? 25.4 : 1)",
+      "as": "converted_rain"
+    }
+  ],
   "params": [
     {
       "name": "hover",
@@ -301,6 +307,16 @@
         "type": "point",
         "on": "mouseover",
         "nearest": true
+      }
+    },
+    {
+      "name": "rainUnit",
+      "value": "MM",
+      "bind": {
+        "name": "Unit",
+        "input": "select",
+        "options": ["Millimeter (mm)", "Inches (in)"],
+        "labels": ["Millimeter (mm)", "Inches (in)"]
       }
     }
   ],
@@ -312,18 +328,26 @@
       "field": "date",
       "type": "ordinal",
       "timeUnit": "month",
-      "title": "Month"
+      "title": null
     },
     "x": {
       "field": "date",
       "type": "ordinal",
       "timeUnit": "date",
-      "title": "Day"
+      "title": "Day of the month"
     },
     "size": {
-      "field": "rain_mm",
+      "field": "converted_rain",
       "type": "quantitative",
-      "aggregate": "sum"
+      "aggregate": "sum",
+      "legend": {
+        "title": "Amount of Rain",
+        "direction": "horizontal",
+        "orient": "bottom"
+      }
+    },
+    "color": {
+      "value": "#45AAF2"
     },
     "stroke": {
       "condition": { "param": "hover", "value": "white" },
@@ -334,8 +358,12 @@
       "value": 0
     },
     "tooltip": [
-      { "type": "temporal", "field": "date" },
-      { "field": "rain_mm", "type": "quantitative" }
+      { "type": "temporal", "field": "date", "title": "Date" },
+      {
+        "field": "converted_rain",
+        "type": "quantitative",
+        "title": "Amount of Rain"
+      }
     ]
   },
   "config": {
@@ -371,6 +399,14 @@
       }
     },
     "title": { "color": "rgb(224, 224, 224)" }
+  },
+  "title": {
+    "text": "Amount of Rain Experienced",
+    "subtitle": "Source: Lomnia - OpenMeteo",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10,
+    "fontSize": 16,
+    "offset": 20
   },
   "background": null,
   "width": "container"

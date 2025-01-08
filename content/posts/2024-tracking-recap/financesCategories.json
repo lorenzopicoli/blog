@@ -1,0 +1,205 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Vega-Lite version of bar chart from https://observablehq.com/@d3/learn-d3-scales.",
+  "title": {
+    "text": "Percentage of Spending by Category",
+    "subtitle": "Source: Lomnia - Obsidian/Watch",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10,
+    "fontSize": 16,
+    "offset": 20
+  },
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "name": "People",
+        "percentage": 0.0788
+      },
+      {
+        "name": "Banking Fees",
+        "percentage": 0.0114
+      },
+      {
+        "name": "Car",
+        "percentage": 0.0014
+      },
+      {
+        "name": "Entertainment",
+        "percentage": 0.0496
+      },
+      {
+        "name": "Betting",
+        "percentage": 0.0034
+      },
+      {
+        "name": "Cinema",
+        "percentage": 0.0007
+      },
+      {
+        "name": "Food",
+        "percentage": 0.139
+      },
+      {
+        "name": "Health",
+        "percentage": 0.0239
+      },
+      {
+        "name": "Exercising",
+        "percentage": 0.0113
+      },
+      {
+        "name": "Haircut",
+        "percentage": 0.0047
+      },
+      {
+        "name": "Home",
+        "percentage": 0.0169
+      },
+      {
+        "name": "ISP",
+        "percentage": 0.0142
+      },
+      {
+        "name": "Rent",
+        "percentage": 0.2537
+      },
+      {
+        "name": "Rounding",
+        "percentage": 0
+      },
+      {
+        "name": "Others",
+        "percentage": 0.0033
+      },
+      {
+        "name": "Recurring",
+        "percentage": 0.008
+      },
+      {
+        "name": "undefined",
+        "percentage": 0.002
+      },
+      {
+        "name": "Shopping",
+        "percentage": 0.0914
+      },
+      {
+        "name": "Transportation",
+        "percentage": 0.0007
+      },
+      {
+        "name": "Biking",
+        "percentage": 0.0016
+      },
+      {
+        "name": "Traveling",
+        "percentage": 0.2357
+      },
+      {
+        "name": "Public Transportation",
+        "percentage": 0.0125
+      },
+      {
+        "name": "Uber",
+        "percentage": 0.0059
+      },
+      {
+        "name": "Unknown",
+        "percentage": 0.0144
+      },
+      {
+        "name": "Utilities",
+        "percentage": 0.0145
+      },
+      {
+        "name": "Withdrawal",
+        "percentage": 0.0008
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "name",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null,
+      "axis": {
+        "ticks": false,
+        "labelPadding": 10,
+        "title": null,
+        "domain": false
+      }
+    },
+    "x": {
+      "field": "percentage",
+      "type": "quantitative",
+      "title": null,
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "field": "percentage",
+          "type": "quantitative",
+          "title": "Percentage",
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 3,
+        "aria": false
+      },
+      "encoding": {
+        "text": {
+          "field": "percentage",
+          "type": "quantitative",
+          "format": ".2%"
+        }
+      }
+    }
+  ],
+  "width": "container",
+  "config": {
+    "text": {
+      "color": "rgb(224, 224, 224)",
+      "font": "monospace",
+      "lineHeight": 1.6,
+      "fontSize": 12
+    },
+    "legend": {
+      "labelColor": "rgb(224, 224, 224)",
+      "labelFont": "monospace",
+      "labelFontSize": 12,
+      "titleColor": "rgb(224, 224, 224)",
+      "titleFont": "monospace",
+      "titleLineHeight": 1.6,
+      "titleFontSize": 12
+    },
+    "axis": {
+      "labelColor": "rgb(224, 224, 224)",
+      "gridColor": "rgb(100, 100, 100)",
+      "titleColor": "rgb(224, 224, 224)",
+      "tickColor": "rgb(224, 224, 224)",
+      "domainColor": "rgb(224, 224, 224)",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelFont": "monospace",
+      "titleFont": "monospace"
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "title": { "color": "rgb(224, 224, 224)" }
+  },
+  "background": null
+}

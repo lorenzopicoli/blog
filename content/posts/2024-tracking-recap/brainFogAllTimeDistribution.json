@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Distribution of Sleep Score (2024)",
-    "subtitle": "Source: Lomnia - Obsidian/Watch",
+    "text": "Distribution of brain fog scores (All Time)",
+    "subtitle": "Source: Lomnia - Obsidian",
     "subtitleColor": "rgb(224, 224, 224)",
     "subtitleFontSize": 10,
     "fontSize": 16,
@@ -11,21 +11,23 @@
   "height": 300,
   "data": {
     "values": [
-      { "bin": "0-6", "count": 35 },
-      { "bin": "6-13", "count": 0 },
-      { "bin": "13-20", "count": 1 },
-      { "bin": "20-26", "count": 1 },
-      { "bin": "26-33", "count": 1 },
-      { "bin": "33-40", "count": 2 },
-      { "bin": "40-46", "count": 4 },
-      { "bin": "46-53", "count": 3 },
-      { "bin": "53-60", "count": 4 },
-      { "bin": "60-66", "count": 3 },
-      { "bin": "66-73", "count": 30 },
-      { "bin": "73-80", "count": 42 },
-      { "bin": "80-86", "count": 151 },
-      { "bin": "86-93", "count": 139 },
-      { "bin": "93-100", "count": 95 }
+      { "bin": "2-4", "count": 121 },
+      { "bin": "4-9", "count": 165 },
+      { "bin": "9-11", "count": 76 },
+      { "bin": "11-16", "count": 56 },
+      { "bin": "16-18", "count": 43 },
+      { "bin": "18-23", "count": 51 },
+      { "bin": "23-26", "count": 9 },
+      { "bin": "26-30", "count": 3 },
+      { "bin": "30-33", "count": 22 },
+      { "bin": "33-38", "count": 3 },
+      { "bin": "38-40", "count": 8 },
+      { "bin": "40-45", "count": 20 },
+      { "bin": "45-47", "count": 6 },
+      { "bin": "47-50", "count": 16 },
+      { "bin": "50-52", "count": 5 },
+      { "bin": "52-55", "count": 0 },
+      { "bin": "55-57", "count": 3 }
     ]
   },
   "params": [
@@ -41,28 +43,29 @@
   "mark": {
     "type": "bar",
     "tooltip": true,
-    "color": "#D4B63C"
+    "color": "#f7f494"
   },
   "encoding": {
     "x": {
       "field": "bin",
       "type": "ordinal",
-      "title": "Sleep Score Range",
+      "title": "Fog Score Range",
       "axis": {
         "labelAngle": 0
-      }
+      },
+      "sort": null
     },
     "y": {
       "field": "count",
       "type": "quantitative",
-      "title": "Number of Nights",
+      "title": "Number of Entries",
       "axis": {
         "grid": true
       }
     },
     "tooltip": [
       { "field": "bin", "title": "Score Range" },
-      { "field": "count", "title": "Nights" }
+      { "field": "count", "title": "Entry count" }
     ]
   },
   "config": {
@@ -99,7 +102,6 @@
     },
     "title": { "color": "rgb(224, 224, 224)" }
   },
-
   "background": null,
   "width": "container"
 }

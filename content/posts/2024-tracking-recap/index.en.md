@@ -133,3 +133,49 @@ Since 2023 I've been giving a score of my previous night of sleep. In June, afte
 But I don't know if I love the chart above for two reasons. First if I look at 2023, when I scored my perception of how my night of sleep went, I see a very different distribution:
 
 {{< vega_embed id="sleepScoreDistribution2023" spec="sleepScoreDistribution2023.json" >}}
+
+Which aligns with my feeling that my watch gives out good scores to nights where I didn't wake up feeling too rested.
+
+- The day that I slept the most was on February 2nd when I slept for 11 hours straight. Checking on my diary I actually had written that I slept a lot, but I also remarked that it was a super productive day. So maybe I should do more of those in 2025 :)
+- The day that I slept the least was on July 11th when the flight I was taking from Lisbon to Montreal was delayed by 10 hours and all I got was a couple hours of sleep at the airport chair
+- I'm not a big napper, but since I got my smart watch in June, it has recorded only 4 naps which sounds reasonable though I'm not sure of the accuracy. It amounted to a total of 3h 38m
+- I slept a total of 111d 11h 4m in 2024!
+- The average time spent sleeping in 2024 was 7h 25min 50seg per day. Which is just bellow the 7h 40min average since I started recording
+
+# Habits
+
+I've been really good at keeping my coffee drinking to a minimum. I've noticed at some point this year that drinking coffee in the afternoon started noticeably affecting my sleep (shocker, I know!). I believe that explains how the caffeine intake was more consistently low starting in september
+
+{{< vega_embed id="coffeePerDay" spec="coffeePerDay.json" >}}
+
+I also track how many times I _answer nature’s call_ 💩 in a day:
+{{< vega_embed id="poopPerDay" spec="poopPerDay.json" >}}
+
+Yes, I got sick in February and it granted me a record of 10 bathroom visits on February 14!
+
+All timne brain fog:
+
+{{< vega_embed id="brainFogAllTime" spec="brainFogAllTime.json" >}}
+
+Which leaves my all-time brain fog distribution looking like this:
+
+{{< vega_embed id="brainFogAllTimeDistribution" spec="brainFogAllTimeDistribution.json" >}}
+
+I called my mom a total of 37 times in 2024 and my grandmother's 17 times.
+
+We also take care of my girlfriend's family dog every once in a while, which totalled 47 dog walks in 2024!
+
+# Meta
+
+| Metric                                 | Total |
+| -------------------------------------- | ----- |
+| Heart rate readings cumulative total   | 4.11k |
+| Locations logged cumulative total      | 1.86M |
+| DNS queries cumulative total           | 44.1M |
+| Habits logged cumulative total         | 13.1k |
+| Snoring entries cumulative total       | 817   |
+| Obsidian File Entries Cumulative Total | 1.22k |
+| Spotify recorded listened tracks       | 106k  |
+| Financial Transactions Recorded        | 7k    |
+
+{{< vega_embed id="financesCategories" spec="financesCategories.json" >}}

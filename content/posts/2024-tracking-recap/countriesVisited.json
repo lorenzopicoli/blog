@@ -27,7 +27,7 @@
     {
       "name": "visited_countries",
       "format": { "type": "csv" },
-      "values": "country_id,is_visited,color\n76,1,#2ecc71\n124,1,#e74c3c\n620,1,#f1c40f\n250,1,#9b59b6\n840,1,#3498db",
+      "values": "country_id,is_visited,color\n76,1,#2EAF7D\n124,1,#E17055\n620,1,#D4B63C\n250,1,#6E70EF\n840,1,#45AAF2",
       "transform": [
         {
           "type": "filter",
@@ -58,11 +58,11 @@
       "encode": {
         "enter": {
           "strokeWidth": { "value": 0.5 },
-          "stroke": { "value": "#666" }
+          "stroke": { "value": "#333333" }
         },
         "update": {
           "fill": {
-            "signal": "datum.visited && datum.visited.is_visited == 1 ? datum.visited.color : '#f0f0f0'"
+            "signal": "datum.visited && datum.visited.is_visited == 1 ? datum.visited.color : '#2A2A2A'"
           }
         }
       },

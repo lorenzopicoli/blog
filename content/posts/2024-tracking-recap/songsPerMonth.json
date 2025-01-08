@@ -1,35 +1,1068 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Monthly Music Listening Patterns (2024)",
-    "fontSize": 16,
-    "anchor": "middle"
-  },
-  "width": "container",
-  "height": 400,
-  "background": null,
   "data": {
     "values": [
-      { "month": "Jan", "count": 724, "differents": 442, "monthNum": 1 },
-      { "month": "Feb", "count": 460, "differents": 260, "monthNum": 2 },
-      { "month": "Mar", "count": 1414, "differents": 612, "monthNum": 3 },
-      { "month": "Apr", "count": 1287, "differents": 669, "monthNum": 4 },
-      { "month": "May", "count": 1068, "differents": 592, "monthNum": 5 },
-      { "month": "Jun", "count": 776, "differents": 445, "monthNum": 6 },
-      { "month": "Jul", "count": 407, "differents": 239, "monthNum": 7 },
-      { "month": "Aug", "count": 444, "differents": 279, "monthNum": 8 },
-      { "month": "Sep", "count": 582, "differents": 320, "monthNum": 9 },
-      { "month": "Oct", "count": 496, "differents": 306, "monthNum": 10 },
-      { "month": "Nov", "count": 553, "differents": 328, "monthNum": 11 },
-      { "month": "Dec", "count": 506, "differents": 376, "monthNum": 12 }
+      {
+        "_id": {
+          "year": 2015,
+          "month": 1
+        },
+        "count": 150,
+        "differents": 104,
+        "date": "2015-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 5
+        },
+        "count": 33,
+        "differents": 33,
+        "date": "2015-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 6
+        },
+        "count": 539,
+        "differents": 300,
+        "date": "2015-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 7
+        },
+        "count": 757,
+        "differents": 496,
+        "date": "2015-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 8
+        },
+        "count": 130,
+        "differents": 96,
+        "date": "2015-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 9
+        },
+        "count": 145,
+        "differents": 87,
+        "date": "2015-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 10
+        },
+        "count": 1049,
+        "differents": 563,
+        "date": "2015-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 11
+        },
+        "count": 589,
+        "differents": 382,
+        "date": "2015-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2015,
+          "month": 12
+        },
+        "count": 780,
+        "differents": 334,
+        "date": "2015-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 1
+        },
+        "count": 592,
+        "differents": 346,
+        "date": "2016-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 2
+        },
+        "count": 1819,
+        "differents": 648,
+        "date": "2016-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 3
+        },
+        "count": 2371,
+        "differents": 684,
+        "date": "2016-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 4
+        },
+        "count": 1923,
+        "differents": 819,
+        "date": "2016-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 5
+        },
+        "count": 2326,
+        "differents": 1006,
+        "date": "2016-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 6
+        },
+        "count": 1728,
+        "differents": 828,
+        "date": "2016-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 7
+        },
+        "count": 1384,
+        "differents": 621,
+        "date": "2016-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 8
+        },
+        "count": 1669,
+        "differents": 767,
+        "date": "2016-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 9
+        },
+        "count": 1501,
+        "differents": 671,
+        "date": "2016-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 10
+        },
+        "count": 1504,
+        "differents": 698,
+        "date": "2016-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 11
+        },
+        "count": 1157,
+        "differents": 555,
+        "date": "2016-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2016,
+          "month": 12
+        },
+        "count": 1190,
+        "differents": 429,
+        "date": "2016-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 1
+        },
+        "count": 904,
+        "differents": 523,
+        "date": "2017-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 2
+        },
+        "count": 1040,
+        "differents": 497,
+        "date": "2017-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 3
+        },
+        "count": 899,
+        "differents": 433,
+        "date": "2017-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 4
+        },
+        "count": 1199,
+        "differents": 552,
+        "date": "2017-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 5
+        },
+        "count": 1565,
+        "differents": 814,
+        "date": "2017-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 6
+        },
+        "count": 708,
+        "differents": 252,
+        "date": "2017-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 7
+        },
+        "count": 876,
+        "differents": 406,
+        "date": "2017-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 8
+        },
+        "count": 1210,
+        "differents": 562,
+        "date": "2017-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 9
+        },
+        "count": 1116,
+        "differents": 528,
+        "date": "2017-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 10
+        },
+        "count": 1490,
+        "differents": 685,
+        "date": "2017-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 11
+        },
+        "count": 1261,
+        "differents": 609,
+        "date": "2017-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2017,
+          "month": 12
+        },
+        "count": 1391,
+        "differents": 739,
+        "date": "2017-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 1
+        },
+        "count": 1781,
+        "differents": 783,
+        "date": "2018-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 2
+        },
+        "count": 1630,
+        "differents": 662,
+        "date": "2018-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 3
+        },
+        "count": 1778,
+        "differents": 723,
+        "date": "2018-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 4
+        },
+        "count": 1531,
+        "differents": 655,
+        "date": "2018-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 5
+        },
+        "count": 886,
+        "differents": 503,
+        "date": "2018-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 6
+        },
+        "count": 564,
+        "differents": 317,
+        "date": "2018-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 7
+        },
+        "count": 719,
+        "differents": 418,
+        "date": "2018-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 8
+        },
+        "count": 1379,
+        "differents": 671,
+        "date": "2018-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 9
+        },
+        "count": 2348,
+        "differents": 852,
+        "date": "2018-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 10
+        },
+        "count": 3036,
+        "differents": 863,
+        "date": "2018-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 11
+        },
+        "count": 3054,
+        "differents": 858,
+        "date": "2018-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2018,
+          "month": 12
+        },
+        "count": 2898,
+        "differents": 1027,
+        "date": "2018-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 1
+        },
+        "count": 1794,
+        "differents": 494,
+        "date": "2019-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 2
+        },
+        "count": 69,
+        "differents": 57,
+        "date": "2019-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 3
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 4
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 5
+        },
+        "count": 1,
+        "differents": 1,
+        "date": "2019-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 6
+        },
+        "count": 9,
+        "differents": 9,
+        "date": "2019-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 7
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 8
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 9
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 10
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 11
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2019,
+          "month": 12
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2019-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 1
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2020-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 2
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2020-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 3
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2020-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 4
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2020-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 5
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2020-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 6
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2020-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 7
+        },
+        "count": 0,
+        "differents": 0,
+        "date": "2020-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 8
+        },
+        "count": 536,
+        "differents": 409,
+        "date": "2020-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 9
+        },
+        "count": 1080,
+        "differents": 724,
+        "date": "2020-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 10
+        },
+        "count": 1103,
+        "differents": 795,
+        "date": "2020-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 11
+        },
+        "count": 1646,
+        "differents": 832,
+        "date": "2020-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2020,
+          "month": 12
+        },
+        "count": 1841,
+        "differents": 950,
+        "date": "2020-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 1
+        },
+        "count": 1205,
+        "differents": 555,
+        "date": "2021-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 2
+        },
+        "count": 1042,
+        "differents": 456,
+        "date": "2021-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 3
+        },
+        "count": 1586,
+        "differents": 620,
+        "date": "2021-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 4
+        },
+        "count": 1465,
+        "differents": 782,
+        "date": "2021-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 5
+        },
+        "count": 923,
+        "differents": 484,
+        "date": "2021-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 6
+        },
+        "count": 1092,
+        "differents": 472,
+        "date": "2021-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 7
+        },
+        "count": 1217,
+        "differents": 741,
+        "date": "2021-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 8
+        },
+        "count": 1355,
+        "differents": 741,
+        "date": "2021-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 9
+        },
+        "count": 956,
+        "differents": 551,
+        "date": "2021-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 10
+        },
+        "count": 1384,
+        "differents": 564,
+        "date": "2021-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 11
+        },
+        "count": 789,
+        "differents": 402,
+        "date": "2021-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2021,
+          "month": 12
+        },
+        "count": 1061,
+        "differents": 725,
+        "date": "2021-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 1
+        },
+        "count": 695,
+        "differents": 451,
+        "date": "2022-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 2
+        },
+        "count": 561,
+        "differents": 283,
+        "date": "2022-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 3
+        },
+        "count": 736,
+        "differents": 574,
+        "date": "2022-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 4
+        },
+        "count": 959,
+        "differents": 569,
+        "date": "2022-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 5
+        },
+        "count": 930,
+        "differents": 464,
+        "date": "2022-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 6
+        },
+        "count": 351,
+        "differents": 295,
+        "date": "2022-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 7
+        },
+        "count": 849,
+        "differents": 547,
+        "date": "2022-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 8
+        },
+        "count": 1353,
+        "differents": 822,
+        "date": "2022-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 9
+        },
+        "count": 640,
+        "differents": 365,
+        "date": "2022-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 10
+        },
+        "count": 733,
+        "differents": 488,
+        "date": "2022-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 11
+        },
+        "count": 381,
+        "differents": 233,
+        "date": "2022-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2022,
+          "month": 12
+        },
+        "count": 437,
+        "differents": 344,
+        "date": "2022-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 1
+        },
+        "count": 644,
+        "differents": 534,
+        "date": "2023-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 2
+        },
+        "count": 646,
+        "differents": 503,
+        "date": "2023-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 3
+        },
+        "count": 944,
+        "differents": 683,
+        "date": "2023-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 4
+        },
+        "count": 1133,
+        "differents": 903,
+        "date": "2023-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 5
+        },
+        "count": 1280,
+        "differents": 877,
+        "date": "2023-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 6
+        },
+        "count": 51,
+        "differents": 50,
+        "date": "2023-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 7
+        },
+        "count": 389,
+        "differents": 288,
+        "date": "2023-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 8
+        },
+        "count": 429,
+        "differents": 309,
+        "date": "2023-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 9
+        },
+        "count": 808,
+        "differents": 476,
+        "date": "2023-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 10
+        },
+        "count": 1023,
+        "differents": 534,
+        "date": "2023-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 11
+        },
+        "count": 673,
+        "differents": 385,
+        "date": "2023-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2023,
+          "month": 12
+        },
+        "count": 587,
+        "differents": 310,
+        "date": "2023-12-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 1
+        },
+        "count": 724,
+        "differents": 442,
+        "date": "2024-01-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 2
+        },
+        "count": 460,
+        "differents": 260,
+        "date": "2024-02-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 3
+        },
+        "count": 1414,
+        "differents": 612,
+        "date": "2024-03-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 4
+        },
+        "count": 1287,
+        "differents": 669,
+        "date": "2024-04-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 5
+        },
+        "count": 1068,
+        "differents": 592,
+        "date": "2024-05-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 6
+        },
+        "count": 776,
+        "differents": 445,
+        "date": "2024-06-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 7
+        },
+        "count": 407,
+        "differents": 239,
+        "date": "2024-07-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 8
+        },
+        "count": 444,
+        "differents": 279,
+        "date": "2024-08-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 9
+        },
+        "count": 582,
+        "differents": 320,
+        "date": "2024-09-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 10
+        },
+        "count": 496,
+        "differents": 306,
+        "date": "2024-10-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 11
+        },
+        "count": 553,
+        "differents": 328,
+        "date": "2024-11-01T00:00:00"
+      },
+      {
+        "_id": {
+          "year": 2024,
+          "month": 12
+        },
+        "count": 506,
+        "differents": 376,
+        "date": "2024-12-01T00:00:00"
+      }
     ]
   },
+  "width": "container",
   "encoding": {
     "x": {
-      "field": "month",
-      "type": "nominal",
-      "sort": { "field": "monthNum" },
-      "axis": { "labelAngle": 0, "title": "Month" }
+      "field": "date",
+      "type": "temporal",
+      "title": null
     }
   },
   "layer": [
@@ -42,14 +1075,23 @@
           "field": "count",
           "type": "quantitative",
           "title": "Total Plays",
-          "axis": { "grid": false }
+          "axis": { "grid": false, "tickCount": 10 }
         },
         "color": {
-          "value": "#8B5CF6"
+          "value": "#943126"
         },
         "tooltip": [
-          { "field": "month", "type": "nominal", "title": "Month" },
-          { "field": "count", "type": "quantitative", "title": "Total Plays" },
+          {
+            "field": "date",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%B %Y"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Total Plays"
+          },
           {
             "field": "differents",
             "type": "quantitative",
@@ -68,11 +1110,10 @@
         "y": {
           "field": "differents",
           "type": "quantitative",
-          "title": "Unique Songs",
-          "axis": { "grid": false }
+          "title": "Unique Songs"
         },
         "color": {
-          "value": "#EF4444"
+          "value": "#D4B63C"
         }
       }
     }
@@ -88,6 +1129,7 @@
       "labelColor": "rgb(224, 224, 224)",
       "titleColor": "rgb(224, 224, 224)",
       "tickColor": "rgb(224, 224, 224)",
+      "gridColor": "rgb(100, 100, 100)",
       "domainColor": "rgb(224, 224, 224)",
       "labelFontSize": 12,
       "titleFontSize": 12
@@ -98,5 +1140,14 @@
       }
     },
     "title": { "color": "rgb(224, 224, 224)" }
-  }
+  },
+  "title": {
+    "text": "Monthly Music Listening Patterns",
+    "fontSize": 16,
+    "anchor": "middle",
+    "subtitle": "Source: YourSpotify",
+    "subtitleColor": "rgb(224, 224, 224)",
+    "subtitleFontSize": 10
+  },
+  "background": null
 }
