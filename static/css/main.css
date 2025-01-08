@@ -250,6 +250,7 @@ th {
   font-weight: normal;
   text-transform: uppercase;
   font-size: 0.9em;
+  border-bottom: 1px solid var(--meta-color);
 }
 
 tr:last-child td {
