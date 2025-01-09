@@ -6,7 +6,7 @@
   --link-color: rgb(139, 126, 200);
   --hover-color: rgb(94, 64, 157);
 
-  --max-width: 850px;
+  --max-width: 1000px;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  /* max-width: var(--max-width); */
+  max-width: var(--max-width);
   width: 60vw;
   margin: 0 auto;
   padding: 3rem 1rem;
