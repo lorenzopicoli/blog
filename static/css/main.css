@@ -266,13 +266,21 @@ tr:last-child td {
 
 .chart-wrapper {
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   align-content: center;
   justify-content: center;
   flex-direction: column-reverse;
   gap: 15px;
+}
+
+.no-margin-top {
+  margin-top: 0px;
+}
+
+.no-margin-bottom {
+  margin-top: 0px;
 }
 
 .chart-wrapper > svg {
@@ -287,50 +295,6 @@ tr:last-child td {
 }
 
 /* STATS GRID */
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.stat-box {
-  padding: 1.5rem;
-  background: var(--bg-secondary);
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-color);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.stat-box:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-color);
-}
-
-.stat-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.stat-title {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.stat-value {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin: 0.5rem 0;
-}
-
-.stat-description {
-  font-size: 0.875rem;
-  color: var(--text-tertiary);
-  margin: 0;
-}
 
 .stat-section {
   margin: 2rem 0;
@@ -367,4 +331,49 @@ tr:last-child td {
 
 .stat-section-content li {
   margin: 0.5rem 0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.stat-box {
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+}
+
+.stat-icon {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0.25rem 0;
+}
+
+.stat-description {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin: 0;
 }
