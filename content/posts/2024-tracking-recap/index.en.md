@@ -164,20 +164,24 @@ Some sleep highlights:
 
 # Habits
 
-My coffee consumption has become more mindful since realizing afternoon caffeine noticeably affects my sleep (**shocking**, I know!). The data shows more consistent caffeine intake from September onwards:
+When people think about self-tracking communities like Quantified Self, habits are usually the first thing that comes to mind. However, I've found that tracking habits is harder than tracking most other things on this list. They can be tricky to categorize, and it takes real discipline to log them consistently. Still, I try to track a few key habits in my Obsidian daily notes.
+
+Starting with my coffee consumption. It has become more mindful since realizing afternoon caffeine noticeably affects my sleep (**shocking**, I know!). The data backs up my efforts and it shows more consistent caffeine intake from September onwards:
 
 {{< vega_embed id="coffeePerDay" spec="coffeePerDay.json" >}}
 
 I also track my daily bathroom visits 💩:
 {{< vega_embed id="poopPerDay" spec="poopPerDay.json" >}}
 
-Not much to analyze here except that: yes, I did get sick during my trip to Brazil and that awarded me a record breaking **10 visits on February 14th** - one record I hope stays unbroken in 2025!
+...yes, I did get sick during my trip to Brazil and that awarded me a record breaking **10 visits on February 14th** - one record I hope stays unbroken in 2025!
 
 When I caught COVID in 2023, I experienced [Long Covid and Brain Fog](https://www.health.harvard.edu/blog/what-is-covid-19-brain-fog-and-how-can-you-clear-it-2021030822076). When looking at how I have rated the amount of brain fog I experience, I always like to look at the all-time data as it puts into perspective how far I have come recovering from it:
 
 {{< vega_embed id="brainFogAllTime" spec="brainFogAllTime.json" >}}
 
 {{< vega_embed id="brainFogAllTimeDistribution" spec="brainFogAllTimeDistribution.json" >}}
+
+After doing some rough calculations comparing my brain fog scores at home versus the weeks before and after traveling, I found that my fogginess increases by about 15% around trips. This is probably due to changes in my habits while traveling and the stress leading up to the trip.
 
 Other habit tracking highlights from 2024:
 
