@@ -1,6 +1,6 @@
 +++
 title = "I tracked everything I could in 2024, here's the data"
-date = "2025-01-03T18:24:52-05:00"
+date = "2025-01-08T18:24:52-05:00"
 author = "Lorenzo Piccoli Módolo"
 draft = false
 +++
@@ -31,7 +31,7 @@ I've been working on an app/database that I call [Lomnia](/projects/lomnia) whic
 
 # Location
 
-Location data is what excites me the most. Your movements tell a story - where you've been, how you spend your time, and how your habits evolve. The possibilities for analysis are endless and you can get some beautiful visualizations out of it
+Location data is what excites me the most. Your location data says a lot about you - where you've been, how you spend your time, and how your habits evolve. The possibilities for analysis are endless and you can get some beautiful visualizations out of it
 
 Since February, I've been using [Owntracks](https://owntracks.org/) to send location updates every few seconds to my [home server](/projects/selfhosted). I built a custom backend to store these entries, though I'm planning to migrate to [Owntrack's recorder](https://github.com/owntracks/recorder) sometime this year.
 
@@ -98,6 +98,8 @@ That still didn't answer whether my feeling about listening to less music was ac
 
 _The big gap is when I temporarily switched to Youtube Music_
 
+---
+
 I found it very interesting that my listening pattern is very cyclical throughout the years.
 
 The latter half of 2024 shows not just consistently lower numbers but also less variety - fewer songs and less exploration. I'm curious to see if this is just a temporary phase or a longer-term shift.
@@ -122,10 +124,10 @@ What attracts me to tracking weather data is the ability to put experiences in p
 
 Some weather highlights from 2024:
 
-- **Lowest temperature: -26°C** on Christmas morning at the cottage
-- **Highest temperature: 38°C** on February 1st in my Brazilian hometown
-- The Brazil trip created a dramatic 50°C swing when I returned to Montreal in late April
-- Accumulated **97cm of snow** and **1348mm of rain** throughout the year
+- **Lowest temperature: -26°C (-14.8°F)** on Christmas morning at the cottage
+- **Highest temperature: 38°C (100.4°F)** on February 1st in my Brazilian hometown
+- The Brazil trip created a dramatic 50°C (122°F) swing when I returned to Montreal in late April
+- Accumulated **97cm (38in) of snow** and **1348mm (53in) of rain** throughout the year
 
 While exploring rainfall data, I thought I'd found a bug when I saw this chart:
 

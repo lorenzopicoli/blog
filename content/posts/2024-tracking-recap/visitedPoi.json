@@ -27,7 +27,7 @@
         "x": {
           "aggregate": "sum",
           "field": "number_of_visits",
-          "title": "Number Of Visits",
+          "title": "Number of Visits",
           "axis": {
             "grid": false,
             "ticks": false,
