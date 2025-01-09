@@ -5,17 +5,18 @@ author = "Lorenzo Piccoli Módolo"
 draft = false
 +++
 
+{{< device_banner message="👋 Hi there! This post contains data visualizations that work best on desktop. Feel free to read on, or come back later on a larger screen for the full experience." >}}
 {{< table_of_contents >}}
 
-In february 2024 I embarked on a journey that I've been contemplating for many years now. I've always been fascinated with collecting data, visualising it and looking back at it.
+In February 2024, I embarked on a journey that I'd been contemplating for many years. I've always been fascinated with collecting data, visualising it, and looking back at patterns in my life. There's something deeply satisfying about looking at myself through data.
 
-I decided that I wanted to start tracking every aspect of my life that I could. Inspired by some of the best: [Nicholas Felton and his yearly reports](http://feltron.com/) and by [Felix and howisfelixtoday](https://howisfelix.today) I set myself a goal that by 2025 I would have a dashboard to look and visualize my year. Well I didn't manage to get that dashboard up and running, it's still a [work in progress](https://lorenzomodolo.com/projects/lomnia), but I did accomplish to track a lot of data that I'm excited to share.
+Inspired by some of the best in personal analytics - [Nicholas Felton and his yearly reports](http://feltron.com/) and [Felix's how is felix today](https://howisfelix.today) - I set myself an ambitious goal: by 2025, I would have a dashboard to visualize my entire year. While I haven't quite achieved that dashboard yet (it's still a [work in progress](/projects/lomnia)), I did manage to collect an impressive amount of data that I'm excited to share.
 
 # The Data & Lomnia
 
-The data that we'll be analyzing is a result data that I have been collecting for a while, historical data that I could recover and data that I started collecting in 2024.
+What we'll be analyzing here comes from three sources: data I've been collecting for a while, historical data I managed to recover, and new data points I started tracking in 2024.
 
-I've been working on a app/database that I call [Lomnia](/projects/lomnia) which aggregates information from multiple sources and makes it easy to query or analyze it. [Lomnia](/projects/lomnia) isn't yet open-source because it is super specific to my own setup to the point where it's not useful to anyone else. But I plan on making consistent updates on it and open-source it at some point this year.
+I've been working on an app/database that I call [Lomnia](/projects/lomnia) which aggregates self-tracking information from multiple sources and makes it easy to query and analyze. [Lomnia](/projects/lomnia) isn't open-source yet because it's currently too specific to my own setup to be useful to others. But I plan on making consistent updates and open-sourcing it at some point this year.
 
 {{< stat_grid >}}
 {{< stat title="Heart Rate Readings" value="4.11k" description="Recorded by a Samsung Galaxy Fit3" icon="❤️" >}}
@@ -30,17 +31,17 @@ I've been working on a app/database that I call [Lomnia](/projects/lomnia) which
 
 # Location
 
-The kind of data that makes me the most excited to start recording is Location data. We can tell so much about a person by how much they've traveled, where they were at any given point and the kind of stats and charts you can get from it are super exciting.
+Location data is what excites me the most. Your movements tell a story - where you've been, how you spend your time, and how your habits evolve. The possibilities for analysis are endless and you can get some beautiful visualizations out of it
 
-Starting in February I have been tracking my location by sending updates every few seconds to my server at home with [Owntracks](https://owntracks.org/). I have a backend that I coded myself which stores the location entries in a database, but I plan on moving to [Owntrack's recorder](https://github.com/owntracks/recorder) at some point this year.
+Since February, I've been using [Owntracks](https://owntracks.org/) to send location updates every few seconds to my [home server](/projects/selfhosted). I built a custom backend to store these entries, though I'm planning to migrate to [Owntrack's recorder](https://github.com/owntracks/recorder) sometime this year.
 
-In 2024 I visited a total of **5 countries**, including the country where I live in (Canada).
+In 2024, I set foot on **5 countries**, including Canada where I live.
 
 {{< vega_embed id="days-traveling" spec="daysTraveling.json" >}}
 
 {{< vega_embed id="country" spec="countriesVisited.json" >}}
 
-Given that I have information about when I entered and left each country I have visited, I can calculate how much time I spent in each one of them. This is not as useful for trips since I can simply for plane tickets dates, but it's a way to enhance other metrics by knowing how much time I have spent at home (in Montreal).
+Having precise entry and exit timestamps for each country lets me calculate exactly how much time I spent in each place. While this might seem redundant for trips (I could just check flight dates), it'll come in handy later on to know how much time I've spent at home in Montreal.
 
 | Country       | Time Spent        |
 | ------------- | ----------------- |
@@ -52,13 +53,13 @@ Given that I have information about when I entered and left each country I have 
 
 # Places Visited
 
-Every location that I track gets reverse geocoded using [Nominatim](https://nominatim.org/). Which is super cool and helps me find out some of the country information I used in the previous section. The problem is that just Nominatim isn't super useful since it doesn't know that a certain address is my climbing gym for example. So to help with that, [Lomnia](/projects/lomnia) also takes into consideration a JSON file that I maintain with what I call **places of interest** which is simply [geofencing](https://en.wikipedia.org/wiki/Geofence). With that, I can get some insight into how much I have visited and how time I have spent in these places of interest.
+Every tracked location gets reverse geocoded using [Nominatim](https://nominatim.org/). While this helps with country-level data, it doesn't know that how a certain address relates to me personally. To solve this, [Lomnia](/projects/lomnia) uses a manually maintained JSON file of "places of interest" - essentially a [geofencing](https://en.wikipedia.org/wiki/Geofence) system. This lets me understand how often I visit specific places and how much time I spend there.
 
-In this section I have to remove some information that I prefer not to make public, but by adding information I can effectively tell how much time I've spent anywhere relevant to me.
+I've removed some private information here, but the data still tells an interesting story about my routines and the places I visit the most.
 
 {{< vega_embed id="visitedPoi" spec="visitedPoi.json" >}}
 
-And by calculating how long I stood inside the geofencing radius, I can calculate how much time I spent doing activities or with whom I spent time with
+By calculating time spent within each place of interest, I can see how I've distributed my time across different activities and locations:
 
 | Place of interest           | Time Spent in there |
 | --------------------------- | ------------------- |
@@ -70,44 +71,42 @@ And by calculating how long I stood inside the geofencing radius, I can calculat
 | Bouldering Gym              | 0 days 19:52:54     |
 | Volleyball Gym              | 0 days 10:59:26     |
 
-Some cool nuggets of information from the data above:
+Some interesting insights from this data:
 
-- I've "visited" my home **137 times**. With that we can deduct that I leave the house, on average, once every **2 days** for the time that I spent in Canada. That added up to over **55 days outside**, touching grass
-- I really enjoy bouldering, but I've been terribly inconsistent at it. I want to go at least 52 times next year
-- **One office visit every 10 days** is spot on with what I would've guessed since I rarely go twice a week, but also try to go once a week
-- I have visited my girlfriend's family once every **9 days**. Which added up to a bit over **11 days of time spent at their house or cottage**.
+- I've "visited" my home **137 times**. This means I leave the house, on average, once every **2 days** while in Canada. That adds up to over **55 days** of outdoor time - plenty of time touching grass!
+- Despite enjoying every time I go bouldering, my attendance has been inconsistent. I'm setting a goal of at least 52 sessions for next year
+- My office visits average to **one every 10 days**, which matches what I would've guessed
+- I visit my girlfriend's family roughly every **9 days**, totalling about **11 days** spent at their house or cottage
 
 # Music
 
-I only use Spotify to listen to music. I haven't integrated data collection to [Lomnia](/projects/lomnia) yet, because the amazing [YourSpotify](https://github.com/Yooooomi/your_spotify) project already provides all the data that I would need and I highly recommend you to check it out.
+I exclusively use Spotify to listen to music. While I haven't integrated music data into [Lomnia](/projects/lomnia) yet, the AWESOME [YourSpotify](https://github.com/Yooooomi/your_spotify) project already provides everything I need. I highly recommend checking it out.
 
-Lately I felt like I haven't listened to much music, but I always put on something good when I need to wake up in the morning or when I need help not falling asleep after lunch. So I was curious at what time of the day I listened to music and sure enough:
+Lately I felt like I haven't listened to much music, though it continued being part of my daily routine - it helps snap me out of morning grogginess and keeps me from dozing off after lunch. I was curious if the data would back up this feeling, so for that I looked at what time of day I actually listen to music, and sure enough:
 
 {{< vega_embed id="songsPerHoursOfDay" spec="songsPerHoursOfDay.json" >}}
 
-In 2024 I:
+My 2024 music stats:
 
-- **Listed to 30155** minutes of music. That is just shy is 21 days of music playing in my ears
-- My most listened artist was **Vulfpeck** with a whopping 1854 songs listened. Around 20% of my time listening to music was spent listening to Vulfpeck
-- I listened to **880 different artists**
+- **30,155 minutes** of music (nearly 21 days of continuous listening)
+- Most played artist: **Vulfpeck** with 1,854 plays (about 20% of my total listening time)
+- Explored **880 different artists**
 
-Next I wanted to see if my feeling that I haven't been listening to too much music is backed up by data. For that I pulled up my all time listening numbers:
+That still didn't answer whether my feeling about listening to less music was accurate, so I pulled my all-time numbers:
 
 {{< vega_embed id="songsPerMonth" spec="songsPerMonth.json" >}}
 
-It was very interesing to see that I listen to music is really cyclical, but in the later half of 2024 it has not only been consistently low, but also lacking variety. I have been listening to fewer songs and I haven't been exploring much.
+_The big gap is when I temporarily switched to Youtube Music_
 
-I don't necessarily want to change that in 2025, but it'll be cool to see if it's just a longer cycle or something that will last longer.
+I found it very interesting that my listening pattern is very cyclical throughout the years.
 
----
+The latter half of 2024 shows not just consistently lower numbers but also less variety - fewer songs and less exploration. I'm curious to see if this is just a temporary phase or a longer-term shift.
 
-We looked at hours of the day and monthly listening patterns. But what about 2024 specifically?
-
-On the **8th of June I listened to a total 127 songs** which was my most musical day in 2024. Putting the data into a heatmap also clearly shows this trend of listening to less music towards the latter half of the year
+Looking specifically at 2024, my peak listening day was **June 8th with 127 songs**. This heatmap clearly shows the declining trend in the year's second half:
 
 {{< vega_embed id="songsHeatmap" spec="songsHeatmap.json" >}}
 
-In case you're curious, for 2024, my top 3 artists are:
+My top 3 artists for 2024:
 
 | Artist name  | Songs listened | Total Listened Time |
 | ------------ | -------------- | ------------------- |
@@ -117,82 +116,85 @@ In case you're curious, for 2024, my top 3 artists are:
 
 # Weather
 
-My goal with tracking weather information is to be able to put things into comparission. Sure, it rained a lot today, but have I seen worse? I can always go back and look at the data.
+What attracts me to tracking weather data is the ability to put experiences in perspective. Sure, today might feel particularly rainy, but how does it compare to what I've experienced in the past?
 
 {{< vega_embed id="temperatureLine" spec="temperatureLine.json" >}}
 
-- In 2024 the **lowest temperature I experienced was -26C** on Christmas morning at the cottage. The** highest temperature was 38C** on February 1st while visiting my home town in Brazil.
-- The Brazil trip is what explains the sudden drop at the end of April when I experienced a difference of almost 50C when I came back to Montreal.
-- Throughout the year I've experience a total of **97cm of snow fall** and **1348mm of rain fall**.
+Some weather highlights from 2024:
 
-While exploring the amount of rain I've experienced daily, I thought I had found a bug with my data when I saw the following chart:
+- **Lowest temperature: -26°C** on Christmas morning at the cottage
+- **Highest temperature: 38°C** on February 1st in my Brazilian hometown
+- The Brazil trip created a dramatic 50°C swing when I returned to Montreal in late April
+- Accumulated **97cm of snow** and **1348mm of rain** throughout the year
+
+While exploring rainfall data, I thought I'd found a bug when I saw this chart:
 
 {{< vega_embed id="rainPerDay" spec="rainPerDay.json" >}}
 
-I was sure that I had double logged August 9th or something of that nature. But as it turns out it wasn't a bug. August 9th was [Montreal's wettest day ever recorded as a consequence of the Tropical Storm Debby](https://www.theweathernetwork.com/en/news/weather/forecasts/flooding-expected-as-tropical-rains-target-ontario-quebec).
+When I saw the big dot on August 9th I was sure I had made a mistake. Turns out it wasn't a bug - August 9th was [Montreal's wettest day ever recorded, thanks to Tropical Storm Debby](https://www.theweathernetwork.com/en/news/weather/forecasts/flooding-expected-as-tropical-rains-target-ontario-quebec).
 
-The snow version of the rain map is less exciting as I was in Brazil for a big chunk of the first few months of the year and there hasn't been any crazy snowstorms this year. The snowiest day I experencied was [April 4th](https://www.cbc.ca/news/canada/montreal/april-snowstorm-montreal-1.7164443)
+The snow distribution is less dramatic, partly because I was in Brazil during prime snow season. The snowiest day I experienced was [April 4th](https://www.cbc.ca/news/canada/montreal/april-snowstorm-montreal-1.7164443):
 
 {{< vega_embed id="snowPerDay" spec="snowPerDay.json" >}}
 
 # Sleep
 
-Tracking my sleep, similarly to location, is very exciting to me. Changes in this pattern can be the cause or the consequence of things going on in my life. I've been tracking this data since 2023, but until I bought a smart watch in 2024 I was recording it manually.
-In 2025 I hope to improve my habit tracking and be able to better correlate changes in my sleeping patterns with habit choices. Like for example towards the end of July where I was consistently sleeping less than usual is probably related to some changes that were happening at work, but I can't remember now how that affected my mood.
+Sleep tracking fascinates me because changes in sleep patterns can be both cause and effect of life events. I've tracked sleep since 2023, first manually and then via smartwatch from 2024.
+
+For 2025, I plan to better correlate sleep patterns with habits. For instance, my consistently shorter sleep period in late July probably relates to work changes, but I wish I had better data about how it affected my mood and if there were other aspects of my life that were affected by that.
 
 {{< vega_embed id="sleepHours" spec="sleepHours.json" >}}
 
-Since 2023 I've been giving a score of my previous night of sleep. In June, after I bought my watch I started tracking the sleep score that the watch would give to my previous night. According to the data the vast majority of my nights are great, but I don't know if I trust the score that my watch gives to my night because if I look at 2023, when I manually rated my perception of how my night of sleep went, I see a very different distribution:
+Since 2023, I've manually scored my sleep quality. After getting my watch in June, I started comparing my subjective scores with the watch's measurements. The data shows an interesting disconnect - my watch tends to be more optimistic about my sleep quality than I am:
 
 {{< vega_embed id="sleepScoreDistribution" spec="sleepScoreDistribution.json" >}}
 
 {{< vega_embed id="sleepScoreDistribution2023" spec="sleepScoreDistribution2023.json" >}}
 
-Which aligns with my feeling that my watch gives out good scores to nights where I didn't wake up feeling too rested.
+This aligns with my suspicion that the watch is a bit generous with its scoring - often rating nights as "good" when I didn't feel particularly well-rested.
 
-Some general sleeping stats:
+Some sleep highlights:
 
-- **The day that I slept the most was on February 2nd** when **I slept for 11 hours straight**. Checking on my diary I actually had written that I slept a lot, but I also remarked that it was a super productive day. So maybe I should do more of those in 2025 :)
-- **The day that I slept the least was on July 11th** when the flight I was taking from Lisbon to Montreal was delayed by 10 hours and all I got was a couple hours of sleep at the airport chair
-- I slept a total of **111d 11h 4m** in 2024!
-- The average time spent sleeping in 2024 was **7h 25min 50seg per day**. Which is just bellow the 7h 40min average since I started recording
+- **Longest sleep: 11 hours** on February 2nd - interestingly, my diary notes this was an unusually productive day. Maybe there's a lesson there for 2025!
+- **Shortest sleep: July 11th** during a 10-hour flight delay from Lisbon to Montreal, catching only brief naps in airport chairs
+- **Total sleep in 2024: 111d 11h 4m**
+- **Daily average: 7h 25m 50s** (slightly below my all-time average of 7h 40m)
 
 # Habits
 
-I've been really good at keeping my coffee drinking to a minimum. I've noticed at some point this year that drinking coffee in the afternoon started noticeably affecting my sleep (**shocker**, I know!). I believe that explains how the caffeine intake was more consistently low starting in september
+My coffee consumption has become more mindful since realizing afternoon caffeine noticeably affects my sleep (**shocking**, I know!). The data shows more consistent caffeine intake from September onwards:
 
 {{< vega_embed id="coffeePerDay" spec="coffeePerDay.json" >}}
 
-I also track how many times I _answer nature’s call_ 💩 in a day:
+I also track my daily bathroom visits 💩:
 {{< vega_embed id="poopPerDay" spec="poopPerDay.json" >}}
 
-There's not much to dissect on the previous chart except to clarify that yes, I got sick in February and it granted me a record of **10 bathroom visits on February 14**! That's one record I hope to not break in 2025.
+Not much to analyze here except that: yes, I did get sick during my trip to Brazil and that awarded me a record breaking **10 visits on February 14th** - one record I hope stays unbroken in 2025!
 
-When I first caught covid in 2023, I was one of the lucky ones that got stuck with [Long Covid and Brain Fog](https://www.health.harvard.edu/blog/what-is-covid-19-brain-fog-and-how-can-you-clear-it-2021030822076). That's actually what prompted me to start recording my mood, how well I slept and most of the metrics that I have dating back to 2023. So when looking at how intense my brain fog has been, I like to always check the all time data as it really puts into perspective how far I have come recovering from it.
+When I caught COVID in 2023, I experienced [Long Covid and Brain Fog](https://www.health.harvard.edu/blog/what-is-covid-19-brain-fog-and-how-can-you-clear-it-2021030822076). When looking at how I have rated the amount of brain fog I experience, I always like to look at the all-time data as it puts into perspective how far I have come recovering from it:
 
 {{< vega_embed id="brainFogAllTime" spec="brainFogAllTime.json" >}}
 
 {{< vega_embed id="brainFogAllTimeDistribution" spec="brainFogAllTimeDistribution.json" >}}
 
----
+Other habit tracking highlights from 2024:
 
-I track some other habits for which I haven't taken the time to visualize yet, but some small stats that I gathered are:
-
-- In 2024, I called my mom a total of **37 times** and my grandmother's **17 times**. These numbers might be a bit off as it relies on my manual tracking and it's easy to forget
-- We also take care of my girlfriend's family dog every once in a while, which totalled **47 dog walks** in 2024\*\*!
+- Called my mom **37 times** and grandmother **17 times** (though I might have missed logging some calls)
+- Walked my girlfriend's family dog **47 times**
 
 # Finances
 
-Every single non-cash transaction that I have made since April 2019 has been recorded and saved in beancount files. Beancount is a double-entry bookkeeping computer language that lets you define financial transaction records in a text file. I have built my own importers and [browser extension](/projects/ws-exporter) to acrquire data and though I haven't ingested the data yet in [Lomnia](/projects/lomnia) I can use [Fava](https://github.com/beancount/fava) to explore it.
+Since April 2019, I've recorded every non-cash transaction in beancount files - a double-entry bookkeeping computer language for financial records. I've built custom importers and a [browser extension](/projects/ws-exporter) to gather data from my banks. While this isn't integrated into [Lomnia](/projects/lomnia) yet, I use [Fava](https://github.com/beancount/fava) for analysis.
 
-Unfortunately a lot of the stats would expose my financial information which I would rather keep private, but I can share how my I spent my money on each category. It really goes to show that all the trips that I've made in 2024 really made a dent as I spent almost as much as it as I did on rent
+While I'll keep most financial details private, here's how my spending broke down by category. Working on this made me realize that the trips I've made in 2024 really made a dent as I spent almost as much on it as I did on rent:
 
 {{< vega_embed id="financesCategories" spec="financesCategories.json" >}}
 
 # Next Steps
 
-For 2025 I want to improve my habit tracking with some sort of app that makes it easier for me to track my habits more often throughout the day. I want Obsidian to simply be for text and not over complicate it.
+For 2025, I have four main goals:
 
-I want to improve how [Lomnia's](/projects/lomnia) reverse geocoding works and also make it easier for me to add more and more places of interest as I can see that the data I get from them is very pleasant to analyze.
-
-Last, but not least, I want to start building a library of [ECharts](https://echarts.apache.org/) in Lomnia to make it easier to do this type of post. This was a lot of work to get all the data and the charts ready.
+1. Improve habit tracking with a dedicated app, keeping Obsidian purely for text-based notes
+2. Improve my online life tracking (browser history, apps used, screen time, etc...)
+3. Build an [ECharts](https://echarts.apache.org/) library in Lomnia to simplify creating these kinds of analysis posts - this one took considerable effort to prepare!
+4. Enhance [Lomnia's](/projects/lomnia) reverse geocoding and streamline the process of adding places of interest

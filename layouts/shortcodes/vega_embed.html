@@ -4,7 +4,11 @@
 </div>
 <script type="text/javascript">
   var spec = '{{ $page }}/{{ .Get "spec" }}'
-  vegaEmbed('#{{ .Get "id" }}', spec, { renderer: 'svg', width: 'container' })
+  vegaEmbed('#{{ .Get "id" }}', spec, {
+    renderer: 'svg',
+    width: 'container',
+    actions: { export: true, source: false, compiled: false, editor: false },
+  })
     .then(function (result) {
       setTimeout(() => window.dispatchEvent(new Event('resize')), 1)
     })

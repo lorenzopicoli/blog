@@ -96,9 +96,8 @@ content {
   color: var(--hover-color);
 }
 
-.menu {
-  display: flex;
-  gap: 1rem;
+.menu > a {
+  margin-left: 0.9rem;
 }
 
 .header {
@@ -335,7 +334,7 @@ tr:last-child td {
 
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: 1rem;
   margin: 1.5rem 0;
 }
@@ -376,4 +375,32 @@ tr:last-child td {
   font-size: 0.75rem;
   color: var(--text-tertiary);
   margin: 0;
+}
+
+/* Device Banner */
+.device-banner {
+  display: none;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #ccc;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  font-family: monospace;
+}
+
+.device-banner__text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .device-banner--mobile {
+    display: block;
+  }
 }

@@ -1,0 +1,4 @@
+{{ $message := .Get "message" | default "This website is optimized for desktop viewing. Some features might not work as expected on mobile devices." }}
+<div class="device-banner device-banner--mobile">
+  <p>{{ $message }}</p>
+</div>
