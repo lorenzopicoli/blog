@@ -97,7 +97,7 @@ Isso ainda não respondeu se minha sensação de ouvir menos música estava corr
 
 {{< vega_embed id="songsPerMonth" spec="songsPerMonth.json" >}}
 
-_A grande lacuna é de quando mudei temporariamente para o Youtube Music_
+_O buraco é de quando mudei temporariamente para o Youtube Music_
 
 Achei muito interessante que meu padrão de audição é muito cíclico ao longo dos anos.
 
