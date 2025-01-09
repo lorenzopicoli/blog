@@ -202,5 +202,5 @@ For 2025, I have four main goals:
 
 1. Improve habit tracking with a dedicated app, keeping Obsidian purely for text-based notes
 2. Improve my online life tracking (browser history, apps used, screen time, etc...)
-3. Build an [ECharts](https://echarts.apache.org/) library in Lomnia to simplify creating these kinds of analysis posts - this one took considerable effort to prepare!
+3. Build an [ECharts](https://echarts.apache.org/) library in Lomnia to simplify creating these kinds of analysis posts - this one took considerable effort to prepare! I believe that this will also make it easier for me to find correlation in the data that I have
 4. Enhance [Lomnia's](/projects/lomnia) reverse geocoding and streamline the process of adding places of interest
