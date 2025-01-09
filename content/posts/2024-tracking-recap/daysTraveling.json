@@ -12,8 +12,8 @@
     {
       "name": "legend_data",
       "values": [
-        { "label": "Canada", "color": "#943126" },
-        { "label": "Brazil", "color": "#2EAF7D" },
+        { "label": "Canada", "color": "#2EAF7D" },
+        { "label": "Brazil", "color": "#943126" },
         { "label": "Portugal", "color": "#D4B63C" },
         { "label": "France", "color": "#6E70EF" },
         { "label": "United States", "color": "#45AAF2" },
