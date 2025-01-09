@@ -185,7 +185,7 @@ Outros destaques do rastreamento de hábitos de 2024:
 
 # Finanças
 
-Desde abril de 2019, tenho registrado cada transação não-monetária em arquivos beancount - uma linguagem de contabilidade de entrada dupla por computador para registros financeiros. Construí importadores personalizados e uma [extensão do navegador](/projects/ws-exporter) para coletar dados dos meus bancos. Embora isso ainda não esteja integrado ao [Lomnia](/projects/lomnia), uso o [Fava](https://github.com/beancount/fava) para análise.
+Desde abril de 2019, tenho registrado cada transação que eu fiz (que não tenha sido em dinheiro vivo) em arquivos beancount - uma linguagem de contabilidade de entrada dupla por computador para registros financeiros. Construí importadores personalizados e uma [extensão do navegador](/projects/ws-exporter) para coletar dados dos meus bancos. Embora isso ainda não esteja integrado ao [Lomnia](/projects/lomnia), uso o [Fava](https://github.com/beancount/fava) para análise.
 
 Embora eu mantenha a maioria dos detalhes financeiros privados, aqui está como meus gastos se dividiram por categoria. Trabalhar nisso me fez perceber que as viagens que fiz em 2024 realmente fizeram uma diferença, já que gastei quase tanto nisso quanto em aluguel:
 
