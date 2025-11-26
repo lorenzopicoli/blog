@@ -2,6 +2,6 @@
 <article>
   <h1>{{ .Title }}</h1>
   <div class="post-date article-date">{{ .Date.Format "January 2, 2006" }}</div>
-  <content> {{ .Content }} </content>
+  <content class="post-content"> {{ .Content }} </content>
 </article>
 {{ end }}
