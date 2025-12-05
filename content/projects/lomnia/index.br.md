@@ -11,7 +11,9 @@ Onde eu estava exatamente há um ano? Quanto eu voei nos últimos 5 anos? Quanta
 
 O objetivo do Lomnia é responder todas essas perguntas e muito mais. Descobri que tenho todas as ferramentas para rastrear cada passo meu através de uma combinação de dispositivos (relógios inteligentes), software auto-hospedado (Owntracks e outros) e APIs (Spotify, clima, etc.). Ao processar e agregar todos esses dados em um único banco de dados, devo ser capaz de criar um painel que possa responder efetivamente qualquer pergunta que eu tenha sobre minha vida.
 
-Este projeto está em desenvolvimento inicial, mas você pode encontrar algumas capturas de tela de como ele está atualmente abaixo. Como a implementação atual está muito acoplada com minha configuração e pode vazar detalhes de como rastreio minha vida e detalhes pessoais, o código ainda não é open source, mas estará totalmente disponível no GitHub em breve.
+Este projeto está em desenvolvimento inicial, mas você pode encontrar algumas capturas de tela de como ele está atualmente abaixo. Como a implementação atual está muito acoplada com minha configuração e pode vazar detalhes de como rastreio minha vida e detalhes pessoais.
+
+[Lomnia agora é now open source!](https://github.com/lorenzopicoli/lomnia)
 
 ---
 
