@@ -11,7 +11,9 @@ Where was I exactly one year ago? How much did I fly in the last 5 years? How ma
 
 The goal of Lomnia is to answer all of those questions and more. I've found that I have all the tools to track my every step through a combination of gadgets (smart watches), self-hosted software (Owntracks and others), and APIs (Spotify, weather, etc.). By processing and aggregating all that data in a single database, I should be able to create a dashboard that can effectively answer any question that I have about my life.
 
-This project is in early development, but you can find some screenshots of how it currently looks below. Because the current implementation is very coupled with my setup and might leak details of how I track my life and personal details, the code is not yet open source, but it will be fully available on GitHub soon.
+This project is in early development, but you can find some screenshots of how it currently looks below. Because the current implementation is very coupled with my setup and might leak details of how I track my life and personal details.
+
+[Lomnia is now open source!](https://github.com/lorenzopicoli/lomnia)
 
 ---
 
