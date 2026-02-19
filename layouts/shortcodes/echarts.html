@@ -1,0 +1,11 @@
+{{ $spec := .Page.Resources.GetMatch (.Get "spec") }}
+<div id="{{ .Get "id" }}" style="width: {{ .Get "width" | default "100%" }}; height: {{ .Get "height" | default "400px" }}"></div>
+<script>
+  fetch('{{ .Get "spec" }}')
+    .then(r => r.json())
+    .then(config => {
+      var chart = echarts.init(document.getElementById('{{ .Get "id" }}'), 'dark');
+      chart.setOption(config);
+      window._echartsInstances.push(chart);
+    });
+</script>
