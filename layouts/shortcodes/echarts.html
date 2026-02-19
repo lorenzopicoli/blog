@@ -1,11 +1,37 @@
-{{ $spec := .Page.Resources.GetMatch (.Get "spec") }}
-<div id="{{ .Get "id" }}" style="width: {{ .Get "width" | default "100%" }}; height: {{ .Get "height" | default "400px" }}"></div>
+{{ $id := .Get "id" }}
+{{ $spec := .Get "spec" }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $height := .Get "height" | default "400px" }}
+
+<div id="{{ $id }}" style="width: {{ $width }}; height: {{ $height }}"></div>
 <script>
-  fetch('{{ .Get "spec" }}')
-    .then(r => r.json())
-    .then(config => {
-      var chart = echarts.init(document.getElementById('{{ .Get "id" }}'), 'dark');
-      chart.setOption(config);
-      window._echartsInstances.push(chart);
-    });
+(function() {
+  // Ensure global registry exists regardless of script load order
+  window._echartsInstances = window._echartsInstances || [];
+
+  function initChart() {
+    var el = document.getElementById('{{ $id }}');
+    if (!el) return;
+
+    fetch('{{ $spec }}')
+      .then(function(r) {
+        if (!r.ok) throw new Error('Failed to load chart spec: ' + r.status);
+        return r.json();
+      })
+      .then(function(config) {
+        var chart = echarts.init(el, 'dark');
+        chart.setOption(config);
+        window._echartsInstances.push(chart);
+      })
+      .catch(function(err) {
+        console.error('[echarts shortcode] {{ $id }}:', err);
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initChart);
+  } else {
+    initChart();
+  }
+})();
 </script>
